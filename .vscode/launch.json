@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'helloWorld'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=helloWorld",
+                    "--package=helloWorld"
+                ],
+                "filter": {
+                    "name": "helloWorld",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'helloWorld'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=helloWorld",
+                    "--package=helloWorld"
+                ],
+                "filter": {
+                    "name": "helloWorld",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
