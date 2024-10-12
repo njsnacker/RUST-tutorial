@@ -1,3 +1,5 @@
+use std::time::Duration;
+
 
 
 fn formattedPrint() {
@@ -36,8 +38,34 @@ fn main() {
     /*
      * This is block comment. same as c lang
      */
+    // RUST 이거 컨벤션을 못바꾸나?
+    let mut port : String = "COM3".to_string();
+    let mut baud_rate : u32 = 9600;
+
+    let ports = serialport::available_ports().expect("No ports found!");
+
+    for p  in ports {
+        println!("{}", p.port_name);
+    }
+
+
+    let mut serial = serialport::new("COM15", baud_rate)
+    .timeout(Duration::from_millis(10))
+    .open().expect("Failed to open port");
+
+    let output = "This is output".as_bytes();
+    serial.write(output).expect("Writed Failed");
+
+
+    let mut serial_buf : Vec<u8> = vec ! [0;32];
+    serial.read(serial_buf.as_mut_slice()).expect("Found no data!");
+
+    
+    
+
+
 
     
 
-    formattedPrint();
+    // formattedPrint();
 }
