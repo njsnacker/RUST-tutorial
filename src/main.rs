@@ -1,8 +1,15 @@
+// 기본적인 파일들을 prelude 라고 하는데. 여기서 찾아볼 수 있다.
+// https://doc.rust-lang.org/std/prelude/index.html
+
+
+
+// 없는거는 아래처럼 직접 library (crate) 를 load 하여 사용한다.
 use std::time::Duration;
+use std::io; // import input/output library. io library comes from std library
 
 
 
-fn formattedPrint() {
+fn formattedPrintExample() {
     let x = 5 + /*90 */ 5;
     
     println!("IS `x` 10 or 100? x = {}", x);
@@ -33,15 +40,8 @@ fn formattedPrint() {
     println!("{number:>width$}");
 }
 
-fn main() {
-    // this is comment
-    /*
-     * This is block comment. same as c lang
-     */
-    // RUST 이거 컨벤션을 못바꾸나?
-    let mut port : String = "COM3".to_string();
-    let mut baud_rate : u32 = 9600;
 
+fn serialExample() {
     let ports = serialport::available_ports().expect("No ports found!");
 
     for p  in ports {
@@ -49,7 +49,7 @@ fn main() {
     }
 
 
-    let mut serial = serialport::new("COM15", baud_rate)
+    let mut serial = serialport::new("COM15", 9600)
     .timeout(Duration::from_millis(10))
     .open().expect("Failed to open port");
 
@@ -59,13 +59,24 @@ fn main() {
 
     let mut serial_buf : Vec<u8> = vec ! [0;32];
     serial.read(serial_buf.as_mut_slice()).expect("Found no data!");
+}
+
+fn basicIoExample() {
+    println!("Guess number");
+    println!("Input your num");
+
+    let mut guess = String::new(); // String::new() 에서 ::new() 는 associated function 호출을 의미한다.
+
 
     
-    
+    io::stdin() // Call stdin() function in io library. std::io::stdin() 과 같이 쓸수도 있지만 namespace 를 줄여준다.
+        .read_line(&mut guess)
+        .expect("Failed to read line");
 
+    println!("You guessed {}", guess);
+}
 
+fn main() {
 
-    
-
-    // formattedPrint();
+    basicIoExample();
 }
