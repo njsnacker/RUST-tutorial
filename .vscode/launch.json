@@ -4,15 +4,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'helloWorld'",
+            "name": "Debug executable 'RUST-tutorial'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=helloWorld",
-                    "--package=helloWorld"
+                    "--bin=RUST-tutorial",
+                    "--package=RUST-tutorial"
                 ],
                 "filter": {
-                    "name": "helloWorld",
+                    "name": "RUST-tutorial",
                     "kind": "bin"
                 }
             },
@@ -22,16 +22,35 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'helloWorld'",
+            "name": "Debug unit tests in library 'RUST_tutorial'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=helloWorld",
-                    "--package=helloWorld"
+                    "--lib",
+                    "--package=RUST-tutorial"
                 ],
                 "filter": {
-                    "name": "helloWorld",
+                    "name": "RUST_tutorial",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'RUST-tutorial'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=RUST-tutorial",
+                    "--package=RUST-tutorial"
+                ],
+                "filter": {
+                    "name": "RUST-tutorial",
                     "kind": "bin"
                 }
             },
