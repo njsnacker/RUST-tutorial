@@ -9,7 +9,9 @@ https://stevedonovan.github.io/rust-gentle-intro/1-basics.html
 
 serial port libaray : https://crates.io/crates/serialport
 gui library : egui
-
+ - egui demo : https://www.egui.rs/#Demo
+ - docs : https://docs.rs/egui/latest/egui/
+ - git : https://github.com/emilk/egui
 
 ## Getting started
 

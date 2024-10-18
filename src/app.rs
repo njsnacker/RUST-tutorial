@@ -1,7 +1,7 @@
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 #[derive(serde::Deserialize, serde::Serialize)]
 #[serde(default)] // if we add new fields, give them default values when deserializing old state
-pub struct TemplateApp {
+pub struct SerialApp {
     // Example stuff:
     label: String,
 
@@ -9,7 +9,7 @@ pub struct TemplateApp {
     value: f32,
 }
 
-impl Default for TemplateApp {
+impl Default for SerialApp {
     fn default() -> Self {
         Self {
             // Example stuff:
@@ -19,7 +19,7 @@ impl Default for TemplateApp {
     }
 }
 
-impl TemplateApp {
+impl SerialApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
         // This is also where you can customize the look and feel of egui using
@@ -35,7 +35,7 @@ impl TemplateApp {
     }
 }
 
-impl eframe::App for TemplateApp {
+impl eframe::App for SerialApp {
     /// Called by the frame work to save state before shutdown.
     fn save(&mut self, storage: &mut dyn eframe::Storage) {
         eframe::set_value(storage, eframe::APP_KEY, self);
@@ -50,14 +50,14 @@ impl eframe::App for TemplateApp {
             // The top panel is often a good place for a menu bar:
 
             egui::menu::bar(ui, |ui| {
-                // NOTE: no File->Quit on web pages!
                 ui.menu_button("File", |ui| {
-                    if ui.button("Quit").clicked() {
+                    if ui.button("Exit").clicked() {
                         ctx.send_viewport_cmd(egui::ViewportCommand::Close);
                     }
                 });
                 ui.add_space(16.0);
-                egui::widgets::global_theme_preference_buttons(ui);
+                ui.menu_button("Help", |ui| if ui.button("About").clicked() {});
+                // egui::widgets::global_theme_preference_buttons(ui);
             });
         });
 

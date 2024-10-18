@@ -18,6 +18,6 @@ fn main() -> eframe::Result {
     eframe::run_native(
         "Serial Tool",
         native_options,
-        Box::new(|cc| Ok(Box::new(RUST_tutorial::TemplateApp::new(cc)))),
+        Box::new(|cc| Ok(Box::new(RUST_tutorial::SerialApp::new(cc)))),
     )
 }
