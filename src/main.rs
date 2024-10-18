@@ -72,7 +72,7 @@ fn basicIoExample() {
     io::stdin() // Call stdin() function in io library. std::io::stdin() 과 같이 쓸수도 있지만 namespace 를 줄여준다.
         .read_line(&mut guess)
         .expect("Failed to read line");
-
+q
     println!("You guessed {}", guess);
 }
 
