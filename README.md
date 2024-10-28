@@ -1,17 +1,19 @@
 # README
 
-https://doc.rust-lang.org/book/ch01-02-hello-world.html
-https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html
-
-https://stevedonovan.github.io/rust-gentle-intro/1-basics.html
-
-
-
-serial port libaray : https://crates.io/crates/serialport
+serial port libaray : https://crates.io/crates/serialport  
 gui library : egui
  - egui demo : https://www.egui.rs/#Demo
  - docs : https://docs.rs/egui/latest/egui/
  - git : https://github.com/emilk/egui
+
+
+## WSL Serail connect commands
+``` powershell
+> usbipd list
+> usbipd bind --busid $portName
+> usbipd attach --wsl --busid $portName
+ ```
+
 
 ## Getting started
 
