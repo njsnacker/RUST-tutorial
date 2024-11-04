@@ -1,11 +1,14 @@
 # README
 
-https://doc.rust-lang.org/book/ch01-02-hello-world.html
-https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html
+러스트 기본 입문 책 : https://doc.rust-lang.org/book/ch01-02-hello-world.html 
+한국어 버전 : https://doc.rust-kr.org/
+
+
+예제로 배우는 러스트 : https://doc.rust-lang.org/rust-by-example/hello/print/print_debug.html
 
 https://stevedonovan.github.io/rust-gentle-intro/1-basics.html
 
-
+https://github.com/emilk/egui/issues/996
 
 serial port libaray : https://crates.io/crates/serialport
 gui library : egui
@@ -13,9 +16,11 @@ gui library : egui
  - docs : https://docs.rs/egui/latest/egui/
  - git : https://github.com/emilk/egui
 
+
+
 ## Getting started
 
-Start by clicking "Use this template" at https://github.com/emilk/eframe_template/ or follow [these instructions](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+St art by clicking "Use this template" at https://github.com/emilk/eframe_template/ or follow [these instructions](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
 
 Change the name of the crate: Choose a good name for your project, and change the name to it in:
 * `Cargo.toml`
