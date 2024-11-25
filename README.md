@@ -101,3 +101,36 @@ You can test the template app at <https://emilk.github.io/eframe_template/>.
 As of 2023, egui is in active development with frequent releases with breaking changes. [eframe_template](https://github.com/emilk/eframe_template/) will be updated in lock-step to always use the latest version of egui.
 
 When updating `egui` and `eframe` it is recommended you do so one version at the time, and read about the changes in [the egui changelog](https://github.com/emilk/egui/blob/master/CHANGELOG.md) and [eframe changelog](https://github.com/emilk/egui/blob/master/crates/eframe/CHANGELOG.md).
+
+
+
+
+시리얼 예제
+
+use std::time::Duration;
+
+fn serialExample() {
+    let ports = serialport::available_ports().expect("No ports found!");
+
+    for p  in ports {
+        println!("{}", p.port_name);
+    }
+
+
+    let mut serial = serialport::new("COM15", 9600)
+    .timeout(Duration::from_millis(10))
+    .open().expect("Failed to open port");
+
+    let output = "This is output".as_bytes();
+    serial.write(output).expect("Writed Failed");
+
+
+    let mut serial_buf : Vec<u8> = vec ! [0;32];
+    serial.read(serial_buf.as_mut_slice()).expect("Found no data!");
+}
+
+
+fn main() {
+    println!("Hello, world!");
+    serialExample();
+}
