@@ -1,33 +1,39 @@
-use std::time::Duration;
-
 use serde::ser::SerializeStructVariant;
 use serialport::{SerialPortInfo, SerialPortType};
+use std::thread;
+use std::time::Duration;
+
+fn print_usb_serial_port(port_name: &String, usb_port: &serialport::UsbPortInfo) {
+    println!("포트 이름: {}", port_name);
+
+    if let Some(manufacturer) = &usb_port.manufacturer {
+        println!("제조사: {}", manufacturer);
+    }
+    if let Some(product) = &usb_port.product {
+        println!("제품명: {}", product);
+    }
+    if let Some(serial_number) = &usb_port.serial_number {
+        println!("시리얼 번호: {}", serial_number);
+    }
+}
 
 fn scan_serial_ports() -> Vec<String> {
-    let debug_ports = true;
-    let mut ports_list = Vec::new();
+    let debug_ports: bool = true;
+    let mut ports_name_list = Vec::new();
 
     match serialport::available_ports() {
         Ok(ports) => {
             if ports.is_empty() {
                 print!("No ports exists");
             } else {
-                for port in ports {
-                    match port.port_type {
+                for (idx, port) in ports.iter().enumerate() {
+                    match port.clone().port_type {
                         SerialPortType::UsbPort(usb_port_info) => {
-                            ports_list.push(port.port_name.clone());
-
+                            ports_name_list.push(port.port_name.clone());
                             if debug_ports {
-                                println!("포트 이름 : {}", port.port_name);
-                                if let Some(manufacturer) = usb_port_info.manufacturer {
-                                    println!("제조사: {manufacturer}");
-                                }
-                                if let Some(product) = usb_port_info.product {
-                                    println!("제품명: {product}");
-                                }
-                                if let Some(serial_number) = usb_port_info.serial_number {
-                                    println!("시리얼 번호: {serial_number}\n");
-                                }
+                                println!("포트 번호: {}", idx);
+                                print_usb_serial_port(&port.port_name, &usb_port_info);
+                                println!()
                             }
                         }
                         SerialPortType::PciPort => {}
@@ -43,13 +49,28 @@ fn scan_serial_ports() -> Vec<String> {
         }
     }
 
-    return ports_list;
+    return ports_name_list;
 }
 
 fn main() {
     let mut serial_buf: Vec<u8> = vec![0; 32];
+    let protocol_dummy: [u8; 8] = [0x02, 0xC1, 0x08, 0x12, 0x00, 0x04, 0x78, 0x9F];
 
-    scan_serial_ports();
+    let port_names = scan_serial_ports();
+
+    println!("포트 이름: {:?}", port_names);
+    let mut port0 = serialport::new(&port_names[0], 9_600)
+        .timeout(Duration::from_millis(1000))
+        .open()
+        .expect("Failed to open port");
+
+    loop {
+        for v in protocol_dummy {
+            port0.write(&[v]).expect("Failed to write to port");
+        }
+        port0.write(b"a").expect("Failed to write to port");
+        thread::sleep(Duration::from_millis(1000));
+    }
 }
 
 // fn main() -> eframe::Result {
@@ -96,7 +117,6 @@ fn main() {
 
 // fn gv_ownship() -> String {
 //     let str = String::from("hi?");
-
 //     str
 // }
 
