@@ -5,12 +5,10 @@ use log4rs::{
     encode::pattern::PatternEncoder,
     Handle,
 };
-use serde::ser::SerializeStructVariant;
-use serialport::{SerialPortInfo, SerialPortType};
 use std::thread;
-use std::time::Duration;
 
 mod protocol;
+mod serial;
 
 // const LOG_PATTERN: &str = "[{d} {l}] {m}{n}";
 const LOG_PATTERN: &str = "[{d(%Y-%m-%d %H:%M:%S%.3f)} {l}] {m}{n}";
@@ -73,75 +71,17 @@ fn change_log_level(handle: &Handle, new_level: LevelFilter) {
     handle.set_config(new_config);
 }
 
-fn print_usb_serial_port(port_name: &String, usb_port: &serialport::UsbPortInfo) {
-    debug!("Port name : {}", port_name);
-
-    if let Some(manufacturer) = &usb_port.manufacturer {
-        debug!("MFR : {}", manufacturer);
-    }
-    if let Some(product) = &usb_port.product {
-        debug!("Product : {}", product);
-    }
-    if let Some(serial_number) = &usb_port.serial_number {
-        debug!("Serial : {}", serial_number);
-    }
-}
-
-fn scan_serial_ports() -> Vec<String> {
-    let debug_ports: bool = true;
-    let mut ports_name_list = Vec::new();
-
-    match serialport::available_ports() {
-        Ok(ports) => {
-            if ports.is_empty() {
-                debug!("No ports exists");
-            } else {
-                for (idx, port) in ports.iter().enumerate() {
-                    match port.clone().port_type {
-                        SerialPortType::UsbPort(usb_port_info) => {
-                            ports_name_list.push(port.port_name.clone());
-                            if debug_ports {
-                                debug!("Port num : {}", idx);
-                                print_usb_serial_port(&port.port_name, &usb_port_info);
-                                debug!("")
-                            }
-                        }
-                        SerialPortType::PciPort => {}
-                        SerialPortType::BluetoothPort => {}
-                        SerialPortType::Unknown => {}
-                    }
-                }
-            }
-        }
-        Err(e) => {
-            // ports_info.push(format!("포트 검색 중 에러 발생: {}", e));
-            print!("Error when scanning ports {e}");
-        }
-    }
-
-    return ports_name_list;
-}
-
 fn main() {
     let log_handle = init_logger();
-    change_log_level(&log_handle, LevelFilter::Trace);
+    // change_log_level(&log_handle, LevelFilter::Trace);
     change_log_level(&log_handle, LevelFilter::Debug);
 
     let mut packet: protocol::PACKET = protocol::PACKET::new();
-
-    let mut serial_buf: [u8; 1] = [0; 1];
     let protocol_dummy: [u8; 8] = [0x02, 0xC1, 0x08, 0x12, 0x00, 0x04, 0x78, 0x9F];
-    let mut target_port_name = String::from("COM3");
 
-    let port_names = scan_serial_ports();
-
-    debug!("Port names : {:?}", port_names);
-
-    // FOR DEBUG
-    let mut serial_port = serialport::new(&target_port_name, 9_600)
-        .timeout(Duration::from_millis(1000))
-        .open()
-        .expect("Failed to open port");
+    let mut serial: serial::SERIAL = serial::SERIAL::new();
+    serial.scan_ports();
+    serial.init(&String::from("COM3"), 9_600);
 
     loop {
         // for v in protocol_dummy {
@@ -150,19 +90,12 @@ fn main() {
         // port0.write(b"a").expect("Failed to write to port");
         // thread::sleep(Duration::from_millis(1000));
 
-        match serial_port.read(&mut serial_buf) {
-            Ok(t) => {
-                for byte in &serial_buf[..t] {
-                    trace!("Serial receive : {:02X} ", byte);
-                    let (rslt, p) = packet.parse(*byte);
-                    if rslt {
-                        // trace!("Valid PACKET\r\n{}", p.to_string());
-                        debug!("Packet Received\r\n{}", p.to_string());
-                    }
-                }
-            }
-            Err(ref e) if e.kind() == std::io::ErrorKind::TimedOut => (),
-            Err(e) => eprintln!("{:?}", e),
+        let d = serial.read();
+        trace!("Serial receive : {:02X} ", d);
+        let (rslt, p) = packet.parse(d);
+        if rslt {
+            // trace!("Valid PACKET\r\n{}", p.to_string());
+            debug!("Packet Received\r\n{}", p.to_string());
         }
     }
 }
