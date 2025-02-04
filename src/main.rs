@@ -13,7 +13,7 @@ use std::time::Duration;
 mod protocol;
 
 // const LOG_PATTERN: &str = "[{d} {l}] {m}{n}";
-const LOG_PATTERN: &str = "[{d(%Y-%m-%d %H:%M:%S%.3f)}] {m}{n}";
+const LOG_PATTERN: &str = "[{d(%Y-%m-%d %H:%M:%S%.3f)} {l}] {m}{n}";
 const LOG_FILE: &str = "log.txt";
 
 fn init_logger() -> Handle {
@@ -74,16 +74,16 @@ fn change_log_level(handle: &Handle, new_level: LevelFilter) {
 }
 
 fn print_usb_serial_port(port_name: &String, usb_port: &serialport::UsbPortInfo) {
-    println!("포트 이름: {}", port_name);
+    debug!("Port name : {}", port_name);
 
     if let Some(manufacturer) = &usb_port.manufacturer {
-        println!("제조사: {}", manufacturer);
+        debug!("MFR : {}", manufacturer);
     }
     if let Some(product) = &usb_port.product {
-        println!("제품명: {}", product);
+        debug!("Product : {}", product);
     }
     if let Some(serial_number) = &usb_port.serial_number {
-        println!("시리얼 번호: {}", serial_number);
+        debug!("Serial : {}", serial_number);
     }
 }
 
@@ -94,16 +94,16 @@ fn scan_serial_ports() -> Vec<String> {
     match serialport::available_ports() {
         Ok(ports) => {
             if ports.is_empty() {
-                print!("No ports exists");
+                debug!("No ports exists");
             } else {
                 for (idx, port) in ports.iter().enumerate() {
                     match port.clone().port_type {
                         SerialPortType::UsbPort(usb_port_info) => {
                             ports_name_list.push(port.port_name.clone());
                             if debug_ports {
-                                println!("포트 번호: {}", idx);
+                                debug!("Port num : {}", idx);
                                 print_usb_serial_port(&port.port_name, &usb_port_info);
-                                println!()
+                                debug!("")
                             }
                         }
                         SerialPortType::PciPort => {}
@@ -125,6 +125,7 @@ fn scan_serial_ports() -> Vec<String> {
 fn main() {
     let log_handle = init_logger();
     change_log_level(&log_handle, LevelFilter::Trace);
+    change_log_level(&log_handle, LevelFilter::Debug);
 
     let mut packet: protocol::PACKET = protocol::PACKET::new();
 
@@ -134,10 +135,10 @@ fn main() {
 
     let port_names = scan_serial_ports();
 
-    println!("Port names : {:?}", port_names);
+    debug!("Port names : {:?}", port_names);
 
     // FOR DEBUG
-    let mut port0 = serialport::new(&target_port_name, 9_600)
+    let mut serial_port = serialport::new(&target_port_name, 9_600)
         .timeout(Duration::from_millis(1000))
         .open()
         .expect("Failed to open port");
@@ -148,14 +149,15 @@ fn main() {
         // }
         // port0.write(b"a").expect("Failed to write to port");
         // thread::sleep(Duration::from_millis(1000));
-        match port0.read(&mut serial_buf) {
+
+        match serial_port.read(&mut serial_buf) {
             Ok(t) => {
-                // println!("READ : {:?}", &serial_buf[..t]);
                 for byte in &serial_buf[..t] {
                     trace!("Serial receive : {:02X} ", byte);
                     let (rslt, p) = packet.parse(*byte);
                     if rslt {
-                        trace!("Valid PACKET\r\n{}", p.to_string());
+                        // trace!("Valid PACKET\r\n{}", p.to_string());
+                        debug!("Packet Received\r\n{}", p.to_string());
                     }
                 }
             }
@@ -184,34 +186,4 @@ fn main() {
 //         native_options,
 //         Box::new(|cc| Ok(Box::new(RUST_tutorial::SerialApp::new(cc)))),
 //     )
-// }
-
-// fn main() {
-//     let s1 = gv_ownship();
-
-//     let s2 = String::from("da?");
-//     let s3 = tk_and_gv_back(s2);
-
-//     println!("{s1}");
-//     // println!("{s2}");
-//     println!("{s3}");
-
-//     let mut s = String::from("hello");
-
-//     let r1 = &s; // 문제없음
-//     let r2 = &s; // 문제없음
-//     println!("{} and {}", r1, r2);
-//     // 이 지점 이후로 변수 r1과 r2는 사용되지 않습니다
-
-//     let r3 = &mut s; // 문제없음
-//     println!("{}", r3);
-// }
-
-// fn gv_ownship() -> String {
-//     let str = String::from("hi?");
-//     str
-// }
-
-// fn tk_and_gv_back(a_string: String) -> String {
-//     a_string
 // }

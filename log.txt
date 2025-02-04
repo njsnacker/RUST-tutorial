@@ -1,0 +1,2265 @@
+[2025-02-04 15:31:24.712] Serial receive : 02 
+[2025-02-04 15:31:24.726] Serial receive : A2 
+[2025-02-04 15:31:24.727] Serial receive : 08 
+[2025-02-04 15:31:24.728] Serial receive : 11 
+[2025-02-04 15:31:24.728] Serial receive : 57 
+[2025-02-04 15:31:24.728] Serial receive : 19 
+[2025-02-04 15:31:24.728] Serial receive : FB 
+[2025-02-04 15:31:24.728] Serial receive : 0E 
+[2025-02-04 15:31:24.729] Checksum calc result : calc 0E, got 0E
+[2025-02-04 15:31:24.730] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 57  | 19 | FB | 0E |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:24.730] Packet Received
+[2025-02-04 15:31:24.742] Serial receive : 02 
+[2025-02-04 15:31:24.742] Serial receive : A2 
+[2025-02-04 15:31:24.743] Serial receive : 08 
+[2025-02-04 15:31:24.743] Serial receive : 91 
+[2025-02-04 15:31:24.743] Serial receive : 57 
+[2025-02-04 15:31:24.744] Serial receive : 20 
+[2025-02-04 15:31:24.744] Serial receive : 00 
+[2025-02-04 15:31:24.744] Serial receive : 4E 
+[2025-02-04 15:31:24.745] Checksum calc result : calc 4E, got 4E
+[2025-02-04 15:31:24.746] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 57  | 20 | 00 | 4E |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:24.746] Packet Received
+[2025-02-04 15:31:24.854] Serial receive : 02 
+[2025-02-04 15:31:24.854] Serial receive : C1 
+[2025-02-04 15:31:24.855] Serial receive : 06 
+[2025-02-04 15:31:24.855] Serial receive : 11 
+[2025-02-04 15:31:24.855] Serial receive : 58 
+[2025-02-04 15:31:24.856] Serial receive : 8C 
+[2025-02-04 15:31:24.856] Checksum calc result : calc 8C, got 8C
+[2025-02-04 15:31:24.856] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 58  | 8C |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:24.857] Packet Received
+[2025-02-04 15:31:24.870] Serial receive : 02 
+[2025-02-04 15:31:24.870] Serial receive : C1 
+[2025-02-04 15:31:24.871] Serial receive : 0C 
+[2025-02-04 15:31:24.871] Serial receive : 91 
+[2025-02-04 15:31:24.871] Serial receive : 58 
+[2025-02-04 15:31:24.871] Serial receive : 00 
+[2025-02-04 15:31:24.871] Serial receive : 01 
+[2025-02-04 15:31:24.871] Serial receive : 02 
+[2025-02-04 15:31:24.871] Serial receive : 02 
+[2025-02-04 15:31:24.871] Serial receive : 01 
+[2025-02-04 15:31:24.872] Serial receive : 02 
+[2025-02-04 15:31:24.872] Serial receive : 04 
+[2025-02-04 15:31:24.872] Checksum calc result : calc 04, got 04
+[2025-02-04 15:31:24.872] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 58  | 00 | 01 | 02 | 02 | 01 | 02 | 04 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:24.872] Packet Received
+[2025-02-04 15:31:24.982] Serial receive : 02 
+[2025-02-04 15:31:24.983] Serial receive : 78 
+[2025-02-04 15:31:24.983] Serial receive : 06 
+[2025-02-04 15:31:24.983] Serial receive : 01 
+[2025-02-04 15:31:24.983] Serial receive : 59 
+[2025-02-04 15:31:24.983] Serial receive : DA 
+[2025-02-04 15:31:24.983] Checksum calc result : calc DA, got DA
+[2025-02-04 15:31:24.984] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 59  | DA |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:24.984] Packet Received
+[2025-02-04 15:31:25.287] Serial receive : 02 
+[2025-02-04 15:31:25.287] Serial receive : A2 
+[2025-02-04 15:31:25.288] Serial receive : 08 
+[2025-02-04 15:31:25.288] Serial receive : 11 
+[2025-02-04 15:31:25.288] Serial receive : 5A 
+[2025-02-04 15:31:25.288] Serial receive : 19 
+[2025-02-04 15:31:25.289] Serial receive : FB 
+[2025-02-04 15:31:25.289] Serial receive : 05 
+[2025-02-04 15:31:25.289] Checksum calc result : calc 05, got 05
+[2025-02-04 15:31:25.290] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 5A  | 19 | FB | 05 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:25.290] Packet Received
+[2025-02-04 15:31:25.302] Serial receive : 02 
+[2025-02-04 15:31:25.303] Serial receive : A2 
+[2025-02-04 15:31:25.303] Serial receive : 08 
+[2025-02-04 15:31:25.303] Serial receive : 91 
+[2025-02-04 15:31:25.304] Serial receive : 5A 
+[2025-02-04 15:31:25.304] Serial receive : 20 
+[2025-02-04 15:31:25.305] Serial receive : 00 
+[2025-02-04 15:31:25.319] Serial receive : 49 
+[2025-02-04 15:31:25.319] Checksum calc result : calc 49, got 49
+[2025-02-04 15:31:25.320] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 5A  | 20 | 00 | 49 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:25.320] Packet Received
+[2025-02-04 15:31:25.415] Serial receive : 02 
+[2025-02-04 15:31:25.416] Serial receive : C1 
+[2025-02-04 15:31:25.418] Serial receive : 06 
+[2025-02-04 15:31:25.418] Serial receive : 11 
+[2025-02-04 15:31:25.419] Serial receive : 5B 
+[2025-02-04 15:31:25.420] Serial receive : 89 
+[2025-02-04 15:31:25.421] Checksum calc result : calc 89, got 89
+[2025-02-04 15:31:25.422] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 5B  | 89 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:25.423] Packet Received
+[2025-02-04 15:31:25.430] Serial receive : 02 
+[2025-02-04 15:31:25.431] Serial receive : C1 
+[2025-02-04 15:31:25.431] Serial receive : 0C 
+[2025-02-04 15:31:25.432] Serial receive : 91 
+[2025-02-04 15:31:25.432] Serial receive : 5B 
+[2025-02-04 15:31:25.432] Serial receive : 00 
+[2025-02-04 15:31:25.432] Serial receive : 01 
+[2025-02-04 15:31:25.433] Serial receive : 02 
+[2025-02-04 15:31:25.446] Serial receive : 02 
+[2025-02-04 15:31:25.446] Serial receive : 01 
+[2025-02-04 15:31:25.447] Serial receive : 02 
+[2025-02-04 15:31:25.447] Serial receive : 09 
+[2025-02-04 15:31:25.447] Checksum calc result : calc 09, got 09
+[2025-02-04 15:31:25.448] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 5B  | 00 | 01 | 02 | 02 | 01 | 02 | 09 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:25.448] Packet Received
+[2025-02-04 15:31:25.543] Serial receive : 02 
+[2025-02-04 15:31:25.544] Serial receive : 78 
+[2025-02-04 15:31:25.544] Serial receive : 06 
+[2025-02-04 15:31:25.545] Serial receive : 01 
+[2025-02-04 15:31:25.545] Serial receive : 5C 
+[2025-02-04 15:31:25.546] Serial receive : DD 
+[2025-02-04 15:31:25.546] Checksum calc result : calc DD, got DD
+[2025-02-04 15:31:25.547] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 5C  | DD |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:25.547] Packet Received
+[2025-02-04 15:31:25.846] Serial receive : 02 
+[2025-02-04 15:31:25.847] Serial receive : A2 
+[2025-02-04 15:31:25.847] Serial receive : 08 
+[2025-02-04 15:31:25.848] Serial receive : 11 
+[2025-02-04 15:31:25.848] Serial receive : 5D 
+[2025-02-04 15:31:25.848] Serial receive : 19 
+[2025-02-04 15:31:25.849] Serial receive : FB 
+[2025-02-04 15:31:25.862] Serial receive : 08 
+[2025-02-04 15:31:25.862] Checksum calc result : calc 08, got 08
+[2025-02-04 15:31:25.863] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 5D  | 19 | FB | 08 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:25.864] Packet Received
+[2025-02-04 15:31:25.864] Serial receive : 02 
+[2025-02-04 15:31:25.878] Serial receive : A2 
+[2025-02-04 15:31:25.878] Serial receive : 08 
+[2025-02-04 15:31:25.878] Serial receive : 91 
+[2025-02-04 15:31:25.879] Serial receive : 5D 
+[2025-02-04 15:31:25.879] Serial receive : 20 
+[2025-02-04 15:31:25.879] Serial receive : 00 
+[2025-02-04 15:31:25.879] Serial receive : 44 
+[2025-02-04 15:31:25.879] Checksum calc result : calc 44, got 44
+[2025-02-04 15:31:25.880] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 5D  | 20 | 00 | 44 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:25.880] Packet Received
+[2025-02-04 15:31:25.974] Serial receive : 02 
+[2025-02-04 15:31:25.974] Serial receive : C1 
+[2025-02-04 15:31:25.974] Serial receive : 06 
+[2025-02-04 15:31:25.974] Serial receive : 11 
+[2025-02-04 15:31:25.990] Serial receive : 5E 
+[2025-02-04 15:31:25.990] Serial receive : 8E 
+[2025-02-04 15:31:25.990] Checksum calc result : calc 8E, got 8E
+[2025-02-04 15:31:25.991] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 5E  | 8E |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:25.991] Packet Received
+[2025-02-04 15:31:25.991] Serial receive : 02 
+[2025-02-04 15:31:25.991] Serial receive : C1 
+[2025-02-04 15:31:25.991] Serial receive : 0C 
+[2025-02-04 15:31:26.006] Serial receive : 91 
+[2025-02-04 15:31:26.007] Serial receive : 5E 
+[2025-02-04 15:31:26.007] Serial receive : 00 
+[2025-02-04 15:31:26.007] Serial receive : 01 
+[2025-02-04 15:31:26.007] Serial receive : 02 
+[2025-02-04 15:31:26.007] Serial receive : 02 
+[2025-02-04 15:31:26.008] Serial receive : 01 
+[2025-02-04 15:31:26.008] Serial receive : 02 
+[2025-02-04 15:31:26.008] Serial receive : 0E 
+[2025-02-04 15:31:26.009] Checksum calc result : calc 0E, got 0E
+[2025-02-04 15:31:26.010] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 5E  | 00 | 01 | 02 | 02 | 01 | 02 | 0E |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:26.010] Packet Received
+[2025-02-04 15:31:26.102] Serial receive : 02 
+[2025-02-04 15:31:26.102] Serial receive : 78 
+[2025-02-04 15:31:26.118] Serial receive : 06 
+[2025-02-04 15:31:26.119] Serial receive : 01 
+[2025-02-04 15:31:26.119] Serial receive : 5F 
+[2025-02-04 15:31:26.119] Serial receive : E0 
+[2025-02-04 15:31:26.120] Checksum calc result : calc E0, got E0
+[2025-02-04 15:31:26.120] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 5F  | E0 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:26.121] Packet Received
+[2025-02-04 15:31:26.406] Serial receive : 02 
+[2025-02-04 15:31:26.406] Serial receive : A2 
+[2025-02-04 15:31:26.406] Serial receive : 08 
+[2025-02-04 15:31:26.422] Serial receive : 11 
+[2025-02-04 15:31:26.422] Serial receive : 60 
+[2025-02-04 15:31:26.422] Serial receive : 19 
+[2025-02-04 15:31:26.422] Serial receive : FB 
+[2025-02-04 15:31:26.422] Serial receive : 3F 
+[2025-02-04 15:31:26.423] Checksum calc result : calc 3F, got 3F
+[2025-02-04 15:31:26.423] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 60  | 19 | FB | 3F |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:26.423] Packet Received
+[2025-02-04 15:31:26.438] Serial receive : 02 
+[2025-02-04 15:31:26.438] Serial receive : A2 
+[2025-02-04 15:31:26.438] Serial receive : 08 
+[2025-02-04 15:31:26.438] Serial receive : 91 
+[2025-02-04 15:31:26.438] Serial receive : 60 
+[2025-02-04 15:31:26.438] Serial receive : 20 
+[2025-02-04 15:31:26.439] Serial receive : 00 
+[2025-02-04 15:31:26.439] Serial receive : 7F 
+[2025-02-04 15:31:26.439] Checksum calc result : calc 7F, got 7F
+[2025-02-04 15:31:26.439] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 60  | 20 | 00 | 7F |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:26.439] Packet Received
+[2025-02-04 15:31:26.550] Serial receive : 02 
+[2025-02-04 15:31:26.550] Serial receive : C1 
+[2025-02-04 15:31:26.550] Serial receive : 06 
+[2025-02-04 15:31:26.550] Serial receive : 11 
+[2025-02-04 15:31:26.550] Serial receive : 61 
+[2025-02-04 15:31:26.550] Serial receive : B3 
+[2025-02-04 15:31:26.550] Checksum calc result : calc B3, got B3
+[2025-02-04 15:31:26.551] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 61  | B3 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:26.551] Packet Received
+[2025-02-04 15:31:26.566] Serial receive : 02 
+[2025-02-04 15:31:26.566] Serial receive : C1 
+[2025-02-04 15:31:26.566] Serial receive : 0C 
+[2025-02-04 15:31:26.566] Serial receive : 91 
+[2025-02-04 15:31:26.566] Serial receive : 61 
+[2025-02-04 15:31:26.566] Serial receive : 00 
+[2025-02-04 15:31:26.566] Serial receive : 01 
+[2025-02-04 15:31:26.567] Serial receive : 02 
+[2025-02-04 15:31:26.567] Serial receive : 02 
+[2025-02-04 15:31:26.567] Serial receive : 01 
+[2025-02-04 15:31:26.567] Serial receive : 02 
+[2025-02-04 15:31:26.567] Serial receive : 43 
+[2025-02-04 15:31:26.567] Checksum calc result : calc 43, got 43
+[2025-02-04 15:31:26.568] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 61  | 00 | 01 | 02 | 02 | 01 | 02 | 43 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:26.568] Packet Received
+[2025-02-04 15:31:26.678] Serial receive : 02 
+[2025-02-04 15:31:26.678] Serial receive : 78 
+[2025-02-04 15:31:26.679] Serial receive : 06 
+[2025-02-04 15:31:26.679] Serial receive : 01 
+[2025-02-04 15:31:26.679] Serial receive : 62 
+[2025-02-04 15:31:26.679] Serial receive : E3 
+[2025-02-04 15:31:26.679] Checksum calc result : calc E3, got E3
+[2025-02-04 15:31:26.680] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 62  | E3 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:26.680] Packet Received
+[2025-02-04 15:31:26.982] Serial receive : 02 
+[2025-02-04 15:31:26.982] Serial receive : A2 
+[2025-02-04 15:31:26.982] Serial receive : 08 
+[2025-02-04 15:31:26.982] Serial receive : 11 
+[2025-02-04 15:31:26.983] Serial receive : 63 
+[2025-02-04 15:31:26.983] Serial receive : 19 
+[2025-02-04 15:31:26.983] Serial receive : FB 
+[2025-02-04 15:31:26.983] Serial receive : 02 
+[2025-02-04 15:31:26.983] Checksum calc result : calc 02, got 02
+[2025-02-04 15:31:26.983] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 63  | 19 | FB | 02 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:26.983] Packet Received
+[2025-02-04 15:31:26.998] Serial receive : 02 
+[2025-02-04 15:31:26.998] Serial receive : A2 
+[2025-02-04 15:31:26.998] Serial receive : 08 
+[2025-02-04 15:31:26.998] Serial receive : 91 
+[2025-02-04 15:31:26.998] Serial receive : 63 
+[2025-02-04 15:31:26.998] Serial receive : 20 
+[2025-02-04 15:31:26.998] Serial receive : 00 
+[2025-02-04 15:31:27.014] Serial receive : 42 
+[2025-02-04 15:31:27.014] Checksum calc result : calc 42, got 42
+[2025-02-04 15:31:27.015] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 63  | 20 | 00 | 42 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:27.015] Packet Received
+[2025-02-04 15:31:27.110] Serial receive : 02 
+[2025-02-04 15:31:27.110] Serial receive : C1 
+[2025-02-04 15:31:27.110] Serial receive : 06 
+[2025-02-04 15:31:27.110] Serial receive : 11 
+[2025-02-04 15:31:27.110] Serial receive : 64 
+[2025-02-04 15:31:27.110] Serial receive : B8 
+[2025-02-04 15:31:27.110] Checksum calc result : calc B8, got B8
+[2025-02-04 15:31:27.111] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 64  | B8 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:27.111] Packet Received
+[2025-02-04 15:31:27.126] Serial receive : 02 
+[2025-02-04 15:31:27.126] Serial receive : C1 
+[2025-02-04 15:31:27.126] Serial receive : 0C 
+[2025-02-04 15:31:27.126] Serial receive : 91 
+[2025-02-04 15:31:27.127] Serial receive : 64 
+[2025-02-04 15:31:27.127] Serial receive : 00 
+[2025-02-04 15:31:27.127] Serial receive : 01 
+[2025-02-04 15:31:27.127] Serial receive : 02 
+[2025-02-04 15:31:27.142] Serial receive : 02 
+[2025-02-04 15:31:27.142] Serial receive : 01 
+[2025-02-04 15:31:27.142] Serial receive : 02 
+[2025-02-04 15:31:27.142] Serial receive : 40 
+[2025-02-04 15:31:27.143] Checksum calc result : calc 40, got 40
+[2025-02-04 15:31:27.143] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 64  | 00 | 01 | 02 | 02 | 01 | 02 | 40 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:27.143] Packet Received
+[2025-02-04 15:31:27.238] Serial receive : 02 
+[2025-02-04 15:31:27.238] Serial receive : 78 
+[2025-02-04 15:31:27.238] Serial receive : 06 
+[2025-02-04 15:31:27.238] Serial receive : 01 
+[2025-02-04 15:31:27.238] Serial receive : 65 
+[2025-02-04 15:31:27.238] Serial receive : E6 
+[2025-02-04 15:31:27.238] Checksum calc result : calc E6, got E6
+[2025-02-04 15:31:27.239] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 65  | E6 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:27.239] Packet Received
+[2025-02-04 15:31:27.542] Serial receive : 02 
+[2025-02-04 15:31:27.542] Serial receive : A2 
+[2025-02-04 15:31:27.543] Serial receive : 08 
+[2025-02-04 15:31:27.543] Serial receive : 11 
+[2025-02-04 15:31:27.543] Serial receive : 66 
+[2025-02-04 15:31:27.543] Serial receive : 19 
+[2025-02-04 15:31:27.543] Serial receive : FB 
+[2025-02-04 15:31:27.543] Serial receive : 39 
+[2025-02-04 15:31:27.544] Checksum calc result : calc 39, got 39
+[2025-02-04 15:31:27.544] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 66  | 19 | FB | 39 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:27.544] Packet Received
+[2025-02-04 15:31:27.558] Serial receive : 02 
+[2025-02-04 15:31:27.558] Serial receive : A2 
+[2025-02-04 15:31:27.574] Serial receive : 08 
+[2025-02-04 15:31:27.574] Serial receive : 91 
+[2025-02-04 15:31:27.574] Serial receive : 66 
+[2025-02-04 15:31:27.574] Serial receive : 20 
+[2025-02-04 15:31:27.574] Serial receive : 00 
+[2025-02-04 15:31:27.574] Serial receive : 7D 
+[2025-02-04 15:31:27.574] Checksum calc result : calc 7D, got 7D
+[2025-02-04 15:31:27.575] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 66  | 20 | 00 | 7D |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:31:27.575] Packet Received
+[2025-02-04 15:31:27.670] Serial receive : 02 
+[2025-02-04 15:31:27.670] Serial receive : C1 
+[2025-02-04 15:31:27.671] Serial receive : 06 
+[2025-02-04 15:31:27.671] Serial receive : 11 
+[2025-02-04 15:31:27.686] Serial receive : 67 
+[2025-02-04 15:31:27.686] Serial receive : B5 
+[2025-02-04 15:31:27.686] Checksum calc result : calc B5, got B5
+[2025-02-04 15:31:27.687] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 67  | B5 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:27.687] Packet Received
+[2025-02-04 15:31:27.687] Serial receive : 02 
+[2025-02-04 15:31:27.688] Serial receive : C1 
+[2025-02-04 15:31:27.688] Serial receive : 0C 
+[2025-02-04 15:31:27.702] Serial receive : 91 
+[2025-02-04 15:31:27.702] Serial receive : 67 
+[2025-02-04 15:31:27.702] Serial receive : 00 
+[2025-02-04 15:31:27.703] Serial receive : 01 
+[2025-02-04 15:31:27.703] Serial receive : 02 
+[2025-02-04 15:31:27.703] Serial receive : 02 
+[2025-02-04 15:31:27.703] Serial receive : 01 
+[2025-02-04 15:31:27.703] Serial receive : 02 
+[2025-02-04 15:31:27.703] Serial receive : 45 
+[2025-02-04 15:31:27.703] Checksum calc result : calc 45, got 45
+[2025-02-04 15:31:27.704] Valid PACKET
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 67  | 00 | 01 | 02 | 02 | 01 | 02 | 45 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:31:27.704] Packet Received
+[2025-02-04 15:31:27.798] Serial receive : 02 
+[2025-02-04 15:31:27.814] Serial receive : 78 
+[2025-02-04 15:31:27.814] Serial receive : 06 
+[2025-02-04 15:31:27.814] Serial receive : 01 
+[2025-02-04 15:31:27.814] Serial receive : 68 
+[2025-02-04 15:31:27.814] Serial receive : E9 
+[2025-02-04 15:31:27.815] Checksum calc result : calc E9, got E9
+[2025-02-04 15:31:27.815] Valid PACKET
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 68  | E9 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:31:27.815] Packet Received
+[2025-02-04 15:33:41.837 DEBUG] Packet Received
+[2025-02-04 15:33:41.852 DEBUG] Packet Received
+[2025-02-04 15:33:41.964 DEBUG] Packet Received
+[2025-02-04 15:33:41.996 DEBUG] Packet Received
+[2025-02-04 15:33:42.092 DEBUG] Packet Received
+[2025-02-04 15:33:42.396 DEBUG] Packet Received
+[2025-02-04 15:33:42.428 DEBUG] Packet Received
+[2025-02-04 15:33:42.540 DEBUG] Packet Received
+[2025-02-04 15:33:42.556 DEBUG] Packet Received
+[2025-02-04 15:33:42.668 DEBUG] Packet Received
+[2025-02-04 15:33:42.972 DEBUG] Packet Received
+[2025-02-04 15:33:42.988 DEBUG] Packet Received
+[2025-02-04 15:33:43.100 DEBUG] Packet Received
+[2025-02-04 15:33:43.116 DEBUG] Packet Received
+[2025-02-04 15:33:43.228 DEBUG] Packet Received
+[2025-02-04 15:33:43.533 DEBUG] Packet Received
+[2025-02-04 15:33:43.548 DEBUG] Packet Received
+[2025-02-04 15:33:43.660 DEBUG] Packet Received
+[2025-02-04 15:33:43.692 DEBUG] Packet Received
+[2025-02-04 15:33:43.789 DEBUG] Packet Received
+[2025-02-04 15:33:44.092 DEBUG] Packet Received
+[2025-02-04 15:33:44.124 DEBUG] Packet Received
+[2025-02-04 15:33:44.237 DEBUG] Packet Received
+[2025-02-04 15:33:44.252 DEBUG] Packet Received
+[2025-02-04 15:33:44.365 DEBUG] Packet Received
+[2025-02-04 15:33:44.669 DEBUG] Packet Received
+[2025-02-04 15:33:44.684 DEBUG] Packet Received
+[2025-02-04 15:33:44.813 DEBUG] Packet Received
+[2025-02-04 15:33:44.844 DEBUG] Packet Received
+[2025-02-04 15:33:44.941 DEBUG] Packet Received
+[2025-02-04 15:33:44.972 DEBUG] Packet Received
+[2025-02-04 15:33:45.084 DEBUG] Packet Received
+[2025-02-04 15:33:45.387 DEBUG] Packet Received
+[2025-02-04 15:33:45.403 DEBUG] Packet Received
+[2025-02-04 15:33:45.516 DEBUG] Packet Received
+[2025-02-04 15:33:45.532 DEBUG] Packet Received
+[2025-02-04 15:33:45.643 DEBUG] Packet Received
+[2025-02-04 15:33:45.948 DEBUG] Packet Received
+[2025-02-04 15:33:45.964 DEBUG] Packet Received
+[2025-02-04 15:33:46.076 DEBUG] Packet Received
+[2025-02-04 15:33:46.092 DEBUG] Packet Received
+[2025-02-04 15:33:46.204 DEBUG] Packet Received
+[2025-02-04 15:33:46.507 DEBUG] Packet Received
+[2025-02-04 15:33:46.539 DEBUG] Packet Received
+[2025-02-04 15:33:46.635 DEBUG] Packet Received
+[2025-02-04 15:33:46.668 DEBUG] Packet Received
+[2025-02-04 15:33:46.780 DEBUG] Packet Received
+[2025-02-04 15:33:47.084 DEBUG] Packet Received
+[2025-02-04 15:33:47.099 DEBUG] Packet Received
+[2025-02-04 15:33:47.212 DEBUG] Packet Received
+[2025-02-04 15:33:47.228 DEBUG] Packet Received
+[2025-02-04 15:33:47.340 DEBUG] Packet Received
+[2025-02-04 15:33:47.644 DEBUG] Packet Received
+[2025-02-04 15:33:47.660 DEBUG] Packet Received
+[2025-02-04 15:33:47.771 DEBUG] Packet Received
+[2025-02-04 15:33:47.788 DEBUG] Packet Received
+[2025-02-04 15:33:47.899 DEBUG] Packet Received
+[2025-02-04 15:33:48.204 DEBUG] Packet Received
+[2025-02-04 15:33:48.236 DEBUG] Packet Received
+[2025-02-04 15:33:48.332 DEBUG] Packet Received
+[2025-02-04 15:33:48.364 DEBUG] Packet Received
+[2025-02-04 15:33:48.460 DEBUG] Packet Received
+[2025-02-04 15:33:48.763 DEBUG] Packet Received
+[2025-02-04 15:33:48.795 DEBUG] Packet Received
+[2025-02-04 15:33:48.907 DEBUG] Packet Received
+[2025-02-04 15:33:48.923 DEBUG] Packet Received
+[2025-02-04 15:33:49.036 DEBUG] Packet Received
+[2025-02-04 15:33:49.340 DEBUG] Packet Received
+[2025-02-04 15:33:49.356 DEBUG] Packet Received
+[2025-02-04 15:33:49.468 DEBUG] Packet Received
+[2025-02-04 15:33:49.483 DEBUG] Packet Received
+[2025-02-04 15:33:49.596 DEBUG] Packet Received
+[2025-02-04 15:33:49.900 DEBUG] Packet Received
+[2025-02-04 15:33:49.915 DEBUG] Packet Received
+[2025-02-04 15:33:50.027 DEBUG] Packet Received
+[2025-02-04 15:33:50.059 DEBUG] Packet Received
+[2025-02-04 15:33:50.156 DEBUG] Packet Received
+[2025-02-04 15:33:50.459 DEBUG] Packet Received
+[2025-02-04 15:33:50.491 DEBUG] Packet Received
+[2025-02-04 15:33:50.588 DEBUG] Packet Received
+[2025-02-04 15:33:50.619 DEBUG] Packet Received
+[2025-02-04 15:33:50.731 DEBUG] Packet Received
+[2025-02-04 15:33:51.035 DEBUG] Packet Received
+[2025-02-04 15:33:51.052 DEBUG] Packet Received
+[2025-02-04 15:33:51.164 DEBUG] Packet Received
+[2025-02-04 15:33:51.180 DEBUG] Packet Received
+[2025-02-04 15:33:51.291 DEBUG] Packet Received
+[2025-02-04 15:33:51.595 DEBUG] Packet Received
+[2025-02-04 15:33:51.611 DEBUG] Packet Received
+[2025-02-04 15:33:51.803 DEBUG] Packet Received
+[2025-02-04 15:33:51.819 DEBUG] Packet Received
+[2025-02-04 15:33:51.932 DEBUG] Packet Received
+[2025-02-04 15:33:52.235 DEBUG] Packet Received
+[2025-02-04 15:33:52.251 DEBUG] Packet Received
+[2025-02-04 15:33:52.364 DEBUG] Packet Received
+[2025-02-04 15:33:52.379 DEBUG] Packet Received
+[2025-02-04 15:33:52.492 DEBUG] Packet Received
+[2025-02-04 15:33:52.795 DEBUG] Packet Received
+[2025-02-04 15:33:52.827 DEBUG] Packet Received
+[2025-02-04 15:33:52.923 DEBUG] Packet Received
+[2025-02-04 15:33:52.955 DEBUG] Packet Received
+[2025-02-04 15:33:53.051 DEBUG] Packet Received
+[2025-02-04 15:33:53.371 DEBUG] Packet Received
+[2025-02-04 15:33:53.387 DEBUG] Packet Received
+[2025-02-04 15:33:53.499 DEBUG] Packet Received
+[2025-02-04 15:33:53.515 DEBUG] Packet Received
+[2025-02-04 15:33:53.627 DEBUG] Packet Received
+[2025-02-04 15:33:53.932 DEBUG] Packet Received
+[2025-02-04 15:33:53.947 DEBUG] Packet Received
+[2025-02-04 15:33:54.059 DEBUG] Packet Received
+[2025-02-04 15:33:54.075 DEBUG] Packet Received
+[2025-02-04 15:33:54.187 DEBUG] Packet Received
+[2025-02-04 15:33:54.491 DEBUG] Packet Received
+[2025-02-04 15:33:54.523 DEBUG] Packet Received
+[2025-02-04 15:33:54.619 DEBUG] Packet Received
+[2025-02-04 15:33:54.651 DEBUG] Packet Received
+[2025-02-04 15:33:54.747 DEBUG] Packet Received
+[2025-02-04 15:33:55.067 DEBUG] Packet Received
+[2025-02-04 15:33:55.083 DEBUG] Packet Received
+[2025-02-04 15:33:55.195 DEBUG] Packet Received
+[2025-02-04 15:33:55.211 DEBUG] Packet Received
+[2025-02-04 15:33:55.323 DEBUG] Packet Received
+[2025-02-04 15:33:55.628 DEBUG] Packet Received
+[2025-02-04 15:33:55.643 DEBUG] Packet Received
+[2025-02-04 15:33:55.755 DEBUG] Packet Received
+[2025-02-04 15:33:55.771 DEBUG] Packet Received
+[2025-02-04 15:33:55.883 DEBUG] Packet Received
+[2025-02-04 15:33:56.187 DEBUG] Packet Received
+[2025-02-04 15:33:56.202 DEBUG] Packet Received
+[2025-02-04 15:33:56.315 DEBUG] Packet Received
+[2025-02-04 15:33:56.346 DEBUG] Packet Received
+[2025-02-04 15:33:56.443 DEBUG] Packet Received
+[2025-02-04 15:33:56.747 DEBUG] Packet Received
+[2025-02-04 15:33:56.779 DEBUG] Packet Received
+[2025-02-04 15:33:56.875 DEBUG] Packet Received
+[2025-02-04 15:33:56.906 DEBUG] Packet Received
+[2025-02-04 15:33:57.018 DEBUG] Packet Received
+[2025-02-04 15:33:57.322 DEBUG] Packet Received
+[2025-02-04 15:33:57.338 DEBUG] Packet Received
+[2025-02-04 15:33:57.450 DEBUG] Packet Received
+[2025-02-04 15:33:57.467 DEBUG] Packet Received
+[2025-02-04 15:33:57.578 DEBUG] Packet Received
+[2025-02-04 15:33:57.882 DEBUG] Packet Received
+[2025-02-04 15:33:57.898 DEBUG] Packet Received
+[2025-02-04 15:33:58.011 DEBUG] Packet Received
+[2025-02-04 15:33:58.026 DEBUG] Packet Received
+[2025-02-04 15:33:58.138 DEBUG] Packet Received
+[2025-02-04 15:33:58.443 DEBUG] Packet Received
+[2025-02-04 15:33:58.475 DEBUG] Packet Received
+[2025-02-04 15:33:58.570 DEBUG] Packet Received
+[2025-02-04 15:33:58.602 DEBUG] Packet Received
+[2025-02-04 15:33:58.699 DEBUG] Packet Received
+[2025-02-04 15:33:59.002 DEBUG] Packet Received
+[2025-02-04 15:33:59.034 DEBUG] Packet Received
+[2025-02-04 15:33:59.146 DEBUG] Packet Received
+[2025-02-04 15:33:59.163 DEBUG] Packet Received
+[2025-02-04 15:33:59.274 DEBUG] Packet Received
+[2025-02-04 15:33:59.579 DEBUG] Packet Received
+[2025-02-04 15:33:59.594 DEBUG] Packet Received
+[2025-02-04 15:33:59.706 DEBUG] Packet Received
+[2025-02-04 15:33:59.722 DEBUG] Packet Received
+[2025-02-04 15:33:59.835 DEBUG] Packet Received
+[2025-02-04 15:34:00.139 DEBUG] Packet Received
+[2025-02-04 15:34:00.171 DEBUG] Packet Received
+[2025-02-04 15:34:00.266 DEBUG] Packet Received
+[2025-02-04 15:34:00.298 DEBUG] Packet Received
+[2025-02-04 15:34:00.394 DEBUG] Packet Received
+[2025-02-04 15:34:00.698 DEBUG] Packet Received
+[2025-02-04 15:34:00.730 DEBUG] Packet Received
+[2025-02-04 15:34:00.842 DEBUG] Packet Received
+[2025-02-04 15:34:00.858 DEBUG] Packet Received
+[2025-02-04 15:34:00.971 DEBUG] Packet Received
+[2025-02-04 15:34:01.274 DEBUG] Packet Received
+[2025-02-04 15:34:01.290 DEBUG] Packet Received
+[2025-02-04 15:34:01.402 DEBUG] Packet Received
+[2025-02-04 15:34:01.418 DEBUG] Packet Received
+[2025-02-04 15:34:01.531 DEBUG] Packet Received
+[2025-02-04 15:34:01.834 DEBUG] Packet Received
+[2025-02-04 15:34:01.850 DEBUG] Packet Received
+[2025-02-04 15:34:01.963 DEBUG] Packet Received
+[2025-02-04 15:34:01.995 DEBUG] Packet Received
+[2025-02-04 15:34:02.091 DEBUG] Packet Received
+[2025-02-04 15:34:02.395 DEBUG] Packet Received
+[2025-02-04 15:34:02.426 DEBUG] Packet Received
+[2025-02-04 15:34:02.522 DEBUG] Packet Received
+[2025-02-04 15:34:02.554 DEBUG] Packet Received
+[2025-02-04 15:34:02.666 DEBUG] Packet Received
+[2025-02-04 15:34:02.970 DEBUG] Packet Received
+[2025-02-04 15:34:02.986 DEBUG] Packet Received
+[2025-02-04 15:34:03.099 DEBUG] Packet Received
+[2025-02-04 15:34:03.114 DEBUG] Packet Received
+[2025-02-04 15:34:03.226 DEBUG] Packet Received
+[2025-02-04 15:34:03.530 DEBUG] Packet Received
+[2025-02-04 15:34:03.546 DEBUG] Packet Received
+[2025-02-04 15:34:03.658 DEBUG] Packet Received
+[2025-02-04 15:34:03.690 DEBUG] Packet Received
+[2025-02-04 15:34:03.786 DEBUG] Packet Received
+[2025-02-04 15:34:04.090 DEBUG] Packet Received
+[2025-02-04 15:34:04.122 DEBUG] Packet Received
+[2025-02-04 15:34:04.218 DEBUG] Packet Received
+[2025-02-04 15:34:04.250 DEBUG] Packet Received
+[2025-02-04 15:34:04.362 DEBUG] Packet Received
+[2025-02-04 15:34:04.666 DEBUG] Packet Received
+[2025-02-04 15:34:04.682 DEBUG] Packet Received
+[2025-02-04 15:34:04.794 DEBUG] Packet Received
+[2025-02-04 15:34:04.810 DEBUG] Packet Received
+[2025-02-04 15:34:04.922 DEBUG] Packet Received
+[2025-02-04 15:34:05.227 DEBUG] Packet Received
+[2025-02-04 15:34:05.243 DEBUG] Packet Received
+[2025-02-04 15:34:05.355 DEBUG] Packet Received
+[2025-02-04 15:34:05.371 DEBUG] Packet Received
+[2025-02-04 15:34:05.483 DEBUG] Packet Received
+[2025-02-04 15:34:05.787 DEBUG] Packet Received
+[2025-02-04 15:34:05.818 DEBUG] Packet Received
+[2025-02-04 15:34:05.914 DEBUG] Packet Received
+[2025-02-04 15:34:05.946 DEBUG] Packet Received
+[2025-02-04 15:34:06.042 DEBUG] Packet Received
+[2025-02-04 15:34:06.346 DEBUG] Packet Received
+[2025-02-04 15:34:06.378 DEBUG] Packet Received
+[2025-02-04 15:34:06.474 DEBUG] Packet Received
+[2025-02-04 15:34:06.505 DEBUG] Packet Received
+[2025-02-04 15:34:06.617 DEBUG] Packet Received
+[2025-02-04 15:34:06.922 DEBUG] Packet Received
+[2025-02-04 15:34:06.938 DEBUG] Packet Received
+[2025-02-04 15:34:07.050 DEBUG] Packet Received
+[2025-02-04 15:34:07.066 DEBUG] Packet Received
+[2025-02-04 15:34:07.178 DEBUG] Packet Received
+[2025-02-04 15:34:07.481 DEBUG] Packet Received
+[2025-02-04 15:34:07.497 DEBUG] Packet Received
+[2025-02-04 15:34:07.609 DEBUG] Packet Received
+[2025-02-04 15:34:07.641 DEBUG] Packet Received
+[2025-02-04 15:34:07.737 DEBUG] Packet Received
+[2025-02-04 15:34:08.041 DEBUG] Packet Received
+[2025-02-04 15:34:08.074 DEBUG] Packet Received
+[2025-02-04 15:34:08.169 DEBUG] Packet Received
+[2025-02-04 15:34:08.201 DEBUG] Packet Received
+[2025-02-04 15:34:08.315 DEBUG] Packet Received
+[2025-02-04 15:34:08.602 DEBUG] Packet Received
+[2025-02-04 15:34:08.633 DEBUG] Packet Received
+[2025-02-04 15:34:08.746 DEBUG] Packet Received
+[2025-02-04 15:34:08.761 DEBUG] Packet Received
+[2025-02-04 15:34:08.873 DEBUG] Packet Received
+[2025-02-04 15:34:09.177 DEBUG] Packet Received
+[2025-02-04 15:34:09.193 DEBUG] Packet Received
+[2025-02-04 15:34:09.306 DEBUG] Packet Received
+[2025-02-04 15:34:09.321 DEBUG] Packet Received
+[2025-02-04 15:34:09.433 DEBUG] Packet Received
+[2025-02-04 15:34:09.737 DEBUG] Packet Received
+[2025-02-04 15:34:09.769 DEBUG] Packet Received
+[2025-02-04 15:34:09.865 DEBUG] Packet Received
+[2025-02-04 15:34:09.897 DEBUG] Packet Received
+[2025-02-04 15:34:09.994 DEBUG] Packet Received
+[2025-02-04 15:34:10.297 DEBUG] Packet Received
+[2025-02-04 15:34:10.329 DEBUG] Packet Received
+[2025-02-04 15:34:10.441 DEBUG] Packet Received
+[2025-02-04 15:34:10.457 DEBUG] Packet Received
+[2025-02-04 15:34:10.570 DEBUG] Packet Received
+[2025-02-04 15:34:10.874 DEBUG] Packet Received
+[2025-02-04 15:34:10.890 DEBUG] Packet Received
+[2025-02-04 15:34:11.001 DEBUG] Packet Received
+[2025-02-04 15:34:11.034 DEBUG] Packet Received
+[2025-02-04 15:34:11.129 DEBUG] Packet Received
+[2025-02-04 15:34:11.433 DEBUG] Packet Received
+[2025-02-04 15:34:11.465 DEBUG] Packet Received
+[2025-02-04 15:34:11.561 DEBUG] Packet Received
+[2025-02-04 15:34:11.593 DEBUG] Packet Received
+[2025-02-04 15:34:11.689 DEBUG] Packet Received
+[2025-02-04 15:34:11.994 DEBUG] Packet Received
+[2025-02-04 15:34:12.025 DEBUG] Packet Received
+[2025-02-04 15:34:12.201 DEBUG] Packet Received
+[2025-02-04 15:34:12.233 DEBUG] Packet Received
+[2025-02-04 15:34:12.345 DEBUG] Packet Received
+[2025-02-04 15:34:12.633 DEBUG] Packet Received
+[2025-02-04 15:34:12.665 DEBUG] Packet Received
+[2025-02-04 15:34:12.777 DEBUG] Packet Received
+[2025-02-04 15:34:12.793 DEBUG] Packet Received
+[2025-02-04 15:34:12.906 DEBUG] Packet Received
+[2025-02-04 15:34:13.209 DEBUG] Packet Received
+[2025-02-04 15:34:13.225 DEBUG] Packet Received
+[2025-02-04 15:34:13.337 DEBUG] Packet Received
+[2025-02-04 15:34:13.353 DEBUG] Packet Received
+[2025-02-04 15:34:13.465 DEBUG] Packet Received
+[2025-02-04 15:34:13.770 DEBUG] Packet Received
+[2025-02-04 15:34:13.801 DEBUG] Packet Received
+[2025-02-04 15:34:13.897 DEBUG] Packet Received
+[2025-02-04 15:34:13.929 DEBUG] Packet Received
+[2025-02-04 15:34:14.042 DEBUG] Packet Received
+[2025-02-04 15:34:14.329 DEBUG] Packet Received
+[2025-02-04 15:34:14.361 DEBUG] Packet Received
+[2025-02-04 15:34:14.473 DEBUG] Packet Received
+[2025-02-04 15:34:14.489 DEBUG] Packet Received
+[2025-02-04 15:34:14.601 DEBUG] Packet Received
+[2025-02-04 15:34:14.906 DEBUG] Packet Received
+[2025-02-04 15:34:14.921 DEBUG] Packet Received
+[2025-02-04 15:34:15.049 DEBUG] Packet Received
+[2025-02-04 15:34:15.081 DEBUG] Packet Received
+[2025-02-04 15:34:15.177 DEBUG] Packet Received
+[2025-02-04 15:34:15.209 DEBUG] Packet Received
+[2025-02-04 15:34:15.321 DEBUG] Packet Received
+[2025-02-04 15:34:15.625 DEBUG] Packet Received
+[2025-02-04 15:34:15.641 DEBUG] Packet Received
+[2025-02-04 15:34:15.753 DEBUG] Packet Received
+[2025-02-04 15:34:15.769 DEBUG] Packet Received
+[2025-02-04 15:34:15.881 DEBUG] Packet Received
+[2025-02-04 15:34:16.185 DEBUG] Packet Received
+[2025-02-04 15:34:16.201 DEBUG] Packet Received
+[2025-02-04 15:34:16.313 DEBUG] Packet Received
+[2025-02-04 15:34:16.329 DEBUG] Packet Received
+[2025-02-04 15:34:16.441 DEBUG] Packet Received
+[2025-02-04 15:34:16.744 DEBUG] Packet Received
+[2025-02-04 15:34:16.776 DEBUG] Packet Received
+[2025-02-04 15:34:16.873 DEBUG] Packet Received
+[2025-02-04 15:34:16.905 DEBUG] Packet Received
+[2025-02-04 15:34:17.001 DEBUG] Packet Received
+[2025-02-04 15:34:17.306 DEBUG] Packet Received
+[2025-02-04 15:34:17.337 DEBUG] Packet Received
+[2025-02-04 15:34:17.449 DEBUG] Packet Received
+[2025-02-04 15:34:17.465 DEBUG] Packet Received
+[2025-02-04 15:34:17.577 DEBUG] Packet Received
+[2025-02-04 15:34:17.882 DEBUG] Packet Received
+[2025-02-04 15:34:17.898 DEBUG] Packet Received
+[2025-02-04 15:34:18.010 DEBUG] Packet Received
+[2025-02-04 15:34:18.024 DEBUG] Packet Received
+[2025-02-04 15:34:18.137 DEBUG] Packet Received
+[2025-02-04 15:34:18.440 DEBUG] Packet Received
+[2025-02-04 15:34:18.456 DEBUG] Packet Received
+[2025-02-04 15:34:18.569 DEBUG] Packet Received
+[2025-02-04 15:34:18.601 DEBUG] Packet Received
+[2025-02-04 15:34:18.696 DEBUG] Packet Received
+[2025-02-04 15:34:19.001 DEBUG] Packet Received
+[2025-02-04 15:34:19.032 DEBUG] Packet Received
+[2025-02-04 15:34:19.130 DEBUG] Packet Received
+[2025-02-04 15:34:19.161 DEBUG] Packet Received
+[2025-02-04 15:34:19.273 DEBUG] Packet Received
+[2025-02-04 15:34:19.577 DEBUG] Packet Received
+[2025-02-04 15:34:19.592 DEBUG] Packet Received
+[2025-02-04 15:34:19.705 DEBUG] Packet Received
+[2025-02-04 15:34:19.721 DEBUG] Packet Received
+[2025-02-04 15:34:19.833 DEBUG] Packet Received
+[2025-02-04 15:34:20.137 DEBUG] Packet Received
+[2025-02-04 15:34:20.153 DEBUG] Packet Received
+[2025-02-04 15:34:20.265 DEBUG] Packet Received
+[2025-02-04 15:34:20.281 DEBUG] Packet Received
+[2025-02-04 15:34:20.393 DEBUG] Packet Received
+[2025-02-04 15:34:20.696 DEBUG] Packet Received
+[2025-02-04 15:34:20.729 DEBUG] Packet Received
+[2025-02-04 15:34:20.825 DEBUG] Packet Received
+[2025-02-04 15:34:20.856 DEBUG] Packet Received
+[2025-02-04 15:34:20.952 DEBUG] Packet Received
+[2025-02-04 15:34:21.256 DEBUG] Packet Received
+[2025-02-04 15:34:21.288 DEBUG] Packet Received
+[2025-02-04 15:34:21.400 DEBUG] Packet Received
+[2025-02-04 15:34:21.416 DEBUG] Packet Received
+[2025-02-04 15:34:21.528 DEBUG] Packet Received
+[2025-02-04 15:34:21.833 DEBUG] Packet Received
+[2025-02-04 15:34:21.849 DEBUG] Packet Received
+[2025-02-04 15:34:21.961 DEBUG] Packet Received
+[2025-02-04 15:34:21.976 DEBUG] Packet Received
+[2025-02-04 15:34:22.089 DEBUG] Packet Received
+[2025-02-04 15:34:22.393 DEBUG] Packet Received
+[2025-02-04 15:34:22.408 DEBUG] Packet Received
+[2025-02-04 15:34:22.521 DEBUG] Packet Received
+[2025-02-04 15:34:22.537 DEBUG] Packet Received
+[2025-02-04 15:34:22.649 DEBUG] Packet Received
+[2025-02-04 15:34:22.952 DEBUG] Packet Received
+[2025-02-04 15:34:22.984 DEBUG] Packet Received
+[2025-02-04 15:34:23.081 DEBUG] Packet Received
+[2025-02-04 15:34:23.112 DEBUG] Packet Received
+[2025-02-04 15:34:23.208 DEBUG] Packet Received
+[2025-02-04 15:34:23.513 DEBUG] Packet Received
+[2025-02-04 15:34:23.544 DEBUG] Packet Received
+[2025-02-04 15:34:23.656 DEBUG] Packet Received
+[2025-02-04 15:34:23.673 DEBUG] Packet Received
+[2025-02-04 15:34:23.785 DEBUG] Packet Received
+[2025-02-04 15:34:24.088 DEBUG] Packet Received
+[2025-02-04 15:34:24.104 DEBUG] Packet Received
+[2025-02-04 15:34:24.217 DEBUG] Packet Received
+[2025-02-04 15:34:24.232 DEBUG] Packet Received
+[2025-02-04 15:34:24.344 DEBUG] Packet Received
+[2025-02-04 15:34:24.648 DEBUG] Packet Received
+[2025-02-04 15:34:24.664 DEBUG] Packet Received
+[2025-02-04 15:34:24.776 DEBUG] Packet Received
+[2025-02-04 15:34:24.808 DEBUG] Packet Received
+[2025-02-04 15:34:24.904 DEBUG] Packet Received
+[2025-02-04 15:34:25.209 DEBUG] Packet Received
+[2025-02-04 15:34:25.240 DEBUG] Packet Received
+[2025-02-04 15:34:25.336 DEBUG] Packet Received
+[2025-02-04 15:34:25.368 DEBUG] Packet Received
+[2025-02-04 15:34:25.480 DEBUG] Packet Received
+[2025-02-04 15:34:25.785 DEBUG] Packet Received
+[2025-02-04 15:34:25.800 DEBUG] Packet Received
+[2025-02-04 15:34:25.912 DEBUG] Packet Received
+[2025-02-04 15:34:25.928 DEBUG] Packet Received
+[2025-02-04 15:34:26.041 DEBUG] Packet Received
+[2025-02-04 15:34:26.344 DEBUG] Packet Received
+[2025-02-04 15:34:26.360 DEBUG] Packet Received
+[2025-02-04 15:34:26.472 DEBUG] Packet Received
+[2025-02-04 15:34:26.488 DEBUG] Packet Received
+[2025-02-04 15:34:26.600 DEBUG] Packet Received
+[2025-02-04 15:34:26.904 DEBUG] Packet Received
+[2025-02-04 15:34:26.936 DEBUG] Packet Received
+[2025-02-04 15:34:27.033 DEBUG] Packet Received
+[2025-02-04 15:34:27.064 DEBUG] Packet Received
+[2025-02-04 15:34:27.177 DEBUG] Packet Received
+[2025-02-04 15:34:27.464 DEBUG] Packet Received
+[2025-02-04 15:34:27.496 DEBUG] Packet Received
+[2025-02-04 15:34:27.608 DEBUG] Packet Received
+[2025-02-04 15:34:27.624 DEBUG] Packet Received
+[2025-02-04 15:34:27.736 DEBUG] Packet Received
+[2025-02-04 15:34:28.041 DEBUG] Packet Received
+[2025-02-04 15:34:28.056 DEBUG] Packet Received
+[2025-02-04 15:34:28.168 DEBUG] Packet Received
+[2025-02-04 15:34:28.184 DEBUG] Packet Received
+[2025-02-04 15:34:28.297 DEBUG] Packet Received
+[2025-02-04 15:34:28.601 DEBUG] Packet Received
+[2025-02-04 15:34:28.632 DEBUG] Packet Received
+[2025-02-04 15:34:28.728 DEBUG] Packet Received
+[2025-02-04 15:34:28.760 DEBUG] Packet Received
+[2025-02-04 15:34:28.856 DEBUG] Packet Received
+[2025-02-04 15:34:29.161 DEBUG] Packet Received
+[2025-02-04 15:34:29.192 DEBUG] Packet Received
+[2025-02-04 15:34:29.305 DEBUG] Packet Received
+[2025-02-04 15:34:29.320 DEBUG] Packet Received
+[2025-02-04 15:34:29.433 DEBUG] Packet Received
+[2025-02-04 15:34:29.736 DEBUG] Packet Received
+[2025-02-04 15:34:29.752 DEBUG] Packet Received
+[2025-02-04 15:34:29.864 DEBUG] Packet Received
+[2025-02-04 15:34:29.880 DEBUG] Packet Received
+[2025-02-04 15:34:29.992 DEBUG] Packet Received
+[2025-02-04 15:34:30.295 DEBUG] Packet Received
+[2025-02-04 15:34:30.327 DEBUG] Packet Received
+[2025-02-04 15:34:30.424 DEBUG] Packet Received
+[2025-02-04 15:34:30.456 DEBUG] Packet Received
+[2025-02-04 15:34:30.552 DEBUG] Packet Received
+[2025-02-04 15:34:30.856 DEBUG] Packet Received
+[2025-02-04 15:34:30.888 DEBUG] Packet Received
+[2025-02-04 15:34:31.000 DEBUG] Packet Received
+[2025-02-04 15:34:31.016 DEBUG] Packet Received
+[2025-02-04 15:34:31.127 DEBUG] Packet Received
+[2025-02-04 15:34:31.432 DEBUG] Packet Received
+[2025-02-04 15:34:31.448 DEBUG] Packet Received
+[2025-02-04 15:34:31.561 DEBUG] Packet Received
+[2025-02-04 15:34:31.577 DEBUG] Packet Received
+[2025-02-04 15:34:31.688 DEBUG] Packet Received
+[2025-02-04 15:34:31.992 DEBUG] Packet Received
+[2025-02-04 15:34:32.024 DEBUG] Packet Received
+[2025-02-04 15:34:32.121 DEBUG] Packet Received
+[2025-02-04 15:34:32.152 DEBUG] Packet Received
+[2025-02-04 15:34:32.248 DEBUG] Packet Received
+[2025-02-04 15:34:32.553 DEBUG] Packet Received
+[2025-02-04 15:34:32.584 DEBUG] Packet Received
+[2025-02-04 15:34:32.760 DEBUG] Packet Received
+[2025-02-04 15:34:32.776 DEBUG] Packet Received
+[2025-02-04 15:34:32.888 DEBUG] Packet Received
+[2025-02-04 15:34:33.193 DEBUG] Packet Received
+[2025-02-04 15:34:33.223 DEBUG] Packet Received
+[2025-02-04 15:34:33.319 DEBUG] Packet Received
+[2025-02-04 15:34:33.351 DEBUG] Packet Received
+[2025-02-04 15:34:33.447 DEBUG] Packet Received
+[2025-02-04 15:34:33.752 DEBUG] Packet Received
+[2025-02-04 15:34:33.783 DEBUG] Packet Received
+[2025-02-04 15:34:33.896 DEBUG] Packet Received
+[2025-02-04 15:34:33.912 DEBUG] Packet Received
+[2025-02-04 15:34:34.025 DEBUG] Packet Received
+[2025-02-04 15:34:34.328 DEBUG] Packet Received
+[2025-02-04 15:34:34.343 DEBUG] Packet Received
+[2025-02-04 15:34:34.456 DEBUG] Packet Received
+[2025-02-04 15:34:34.471 DEBUG] Packet Received
+[2025-02-04 15:34:34.585 DEBUG] Packet Received
+[2025-02-04 15:34:34.888 DEBUG] Packet Received
+[2025-02-04 15:34:34.904 DEBUG] Packet Received
+[2025-02-04 15:34:35.015 DEBUG] Packet Received
+[2025-02-04 15:34:35.048 DEBUG] Packet Received
+[2025-02-04 15:34:35.143 DEBUG] Packet Received
+[2025-02-04 15:34:35.448 DEBUG] Packet Received
+[2025-02-04 15:34:35.480 DEBUG] Packet Received
+[2025-02-04 15:34:35.576 DEBUG] Packet Received
+[2025-02-04 15:34:35.607 DEBUG] Packet Received
+[2025-02-04 15:34:35.720 DEBUG] Packet Received
+[2025-02-04 15:34:36.024 DEBUG] Packet Received
+[2025-02-04 15:34:36.040 DEBUG] Packet Received
+[2025-02-04 15:34:36.152 DEBUG] Packet Received
+[2025-02-04 15:34:36.168 DEBUG] Packet Received
+[2025-02-04 15:34:36.279 DEBUG] Packet Received
+[2025-02-04 15:34:36.583 DEBUG] Packet Received
+[2025-02-04 15:34:36.599 DEBUG] Packet Received
+[2025-02-04 15:34:36.711 DEBUG] Packet Received
+[2025-02-04 15:34:36.743 DEBUG] Packet Received
+[2025-02-04 15:34:36.840 DEBUG] Packet Received
+[2025-02-04 15:34:37.144 DEBUG] Packet Received
+[2025-02-04 15:34:37.448 DEBUG] Packet Received
+[2025-02-04 15:34:37.751 DEBUG] Packet Received
+[2025-02-04 15:34:37.767 DEBUG] Packet Received
+[2025-02-04 15:34:37.880 DEBUG] Packet Received
+[2025-02-04 15:34:37.911 DEBUG] Packet Received
+[2025-02-04 15:34:38.008 DEBUG] Packet Received
+[2025-02-04 15:34:38.311 DEBUG] Packet Received
+[2025-02-04 15:34:38.343 DEBUG] Packet Received
+[2025-02-04 15:34:38.440 DEBUG] Packet Received
+[2025-02-04 15:34:38.471 DEBUG] Packet Received
+[2025-02-04 15:34:38.583 DEBUG] Packet Received
+[2025-02-04 15:34:38.888 DEBUG] Packet Received
+[2025-02-04 15:34:38.904 DEBUG] Packet Received
+[2025-02-04 15:34:39.016 DEBUG] Packet Received
+[2025-02-04 15:34:39.031 DEBUG] Packet Received
+[2025-02-04 15:34:39.144 DEBUG] Packet Received
+[2025-02-04 15:34:39.448 DEBUG] Packet Received
+[2025-02-04 15:34:39.463 DEBUG] Packet Received
+[2025-02-04 15:34:39.575 DEBUG] Packet Received
+[2025-02-04 15:34:39.591 DEBUG] Packet Received
+[2025-02-04 15:34:39.703 DEBUG] Packet Received
+[2025-02-04 15:34:40.008 DEBUG] Packet Received
+[2025-02-04 15:34:40.040 DEBUG] Packet Received
+[2025-02-04 15:34:40.135 DEBUG] Packet Received
+[2025-02-04 15:34:40.167 DEBUG] Packet Received
+[2025-02-04 15:34:40.263 DEBUG] Packet Received
+[2025-02-04 15:34:40.567 DEBUG] Packet Received
+[2025-02-04 15:34:40.599 DEBUG] Packet Received
+[2025-02-04 15:34:40.711 DEBUG] Packet Received
+[2025-02-04 15:34:40.727 DEBUG] Packet Received
+[2025-02-04 15:34:40.839 DEBUG] Packet Received
+[2025-02-04 15:34:41.144 DEBUG] Packet Received
+[2025-02-04 15:34:41.160 DEBUG] Packet Received
+[2025-02-04 15:34:41.271 DEBUG] Packet Received
+[2025-02-04 15:34:41.287 DEBUG] Packet Received
+[2025-02-04 15:34:41.400 DEBUG] Packet Received
+[2025-02-04 15:34:41.703 DEBUG] Packet Received
+[2025-02-04 15:34:41.719 DEBUG] Packet Received
+[2025-02-04 15:34:41.831 DEBUG] Packet Received
+[2025-02-04 15:34:41.864 DEBUG] Packet Received
+[2025-02-04 15:34:41.959 DEBUG] Packet Received
+[2025-02-04 15:34:42.263 DEBUG] Packet Received
+[2025-02-04 15:34:42.295 DEBUG] Packet Received
+[2025-02-04 15:34:42.392 DEBUG] Packet Received
+[2025-02-04 15:34:42.423 DEBUG] Packet Received
+[2025-02-04 15:34:42.535 DEBUG] Packet Received
+[2025-02-04 15:34:42.839 DEBUG] Packet Received
+[2025-02-04 15:34:42.855 DEBUG] Packet Received
+[2025-02-04 15:34:42.967 DEBUG] Packet Received
+[2025-02-04 15:34:42.983 DEBUG] Packet Received
+[2025-02-04 15:34:43.095 DEBUG] Packet Received
+[2025-02-04 15:34:43.400 DEBUG] Packet Received
+[2025-02-04 15:34:43.416 DEBUG] Packet Received
+[2025-02-04 15:34:43.528 DEBUG] Packet Received
+[2025-02-04 15:34:43.543 DEBUG] Packet Received
+[2025-02-04 15:34:43.655 DEBUG] Packet Received
+[2025-02-04 15:34:43.959 DEBUG] Packet Received
+[2025-02-04 15:34:43.991 DEBUG] Packet Received
+[2025-02-04 15:34:44.087 DEBUG] Packet Received
+[2025-02-04 15:34:44.119 DEBUG] Packet Received
+[2025-02-04 15:34:44.231 DEBUG] Packet Received
+[2025-02-04 15:34:44.535 DEBUG] Packet Received
+[2025-02-04 15:34:44.551 DEBUG] Packet Received
+[2025-02-04 15:34:44.663 DEBUG] Packet Received
+[2025-02-04 15:34:44.679 DEBUG] Packet Received
+[2025-02-04 15:34:44.791 DEBUG] Packet Received
+[2025-02-04 15:34:45.095 DEBUG] Packet Received
+[2025-02-04 15:34:45.111 DEBUG] Packet Received
+[2025-02-04 15:34:45.239 DEBUG] Packet Received
+[2025-02-04 15:34:45.271 DEBUG] Packet Received
+[2025-02-04 15:34:45.383 DEBUG] Packet Received
+[2025-02-04 15:34:45.399 DEBUG] Packet Received
+[2025-02-04 15:34:45.511 DEBUG] Packet Received
+[2025-02-04 15:34:45.815 DEBUG] Packet Received
+[2025-02-04 15:34:45.830 DEBUG] Packet Received
+[2025-02-04 15:34:45.943 DEBUG] Packet Received
+[2025-02-04 15:34:45.959 DEBUG] Packet Received
+[2025-02-04 15:34:46.072 DEBUG] Packet Received
+[2025-02-04 15:34:46.376 DEBUG] Packet Received
+[2025-02-04 15:34:46.407 DEBUG] Packet Received
+[2025-02-04 15:34:46.504 DEBUG] Packet Received
+[2025-02-04 15:34:46.535 DEBUG] Packet Received
+[2025-02-04 15:34:46.632 DEBUG] Packet Received
+[2025-02-04 15:34:46.935 DEBUG] Packet Received
+[2025-02-04 15:34:46.966 DEBUG] Packet Received
+[2025-02-04 15:34:47.079 DEBUG] Packet Received
+[2025-02-04 15:34:47.094 DEBUG] Packet Received
+[2025-02-04 15:34:47.208 DEBUG] Packet Received
+[2025-02-04 15:34:47.511 DEBUG] Packet Received
+[2025-02-04 15:34:47.527 DEBUG] Packet Received
+[2025-02-04 15:34:47.640 DEBUG] Packet Received
+[2025-02-04 15:34:47.655 DEBUG] Packet Received
+[2025-02-04 15:34:47.767 DEBUG] Packet Received
+[2025-02-04 15:34:48.071 DEBUG] Packet Received
+[2025-02-04 15:34:48.087 DEBUG] Packet Received
+[2025-02-04 15:34:48.199 DEBUG] Packet Received
+[2025-02-04 15:34:48.231 DEBUG] Packet Received
+[2025-02-04 15:34:48.326 DEBUG] Packet Received
+[2025-02-04 15:34:48.631 DEBUG] Packet Received
+[2025-02-04 15:34:48.662 DEBUG] Packet Received
+[2025-02-04 15:34:48.758 DEBUG] Packet Received
+[2025-02-04 15:34:48.790 DEBUG] Packet Received
+[2025-02-04 15:34:48.903 DEBUG] Packet Received
+[2025-02-04 15:34:49.207 DEBUG] Packet Received
+[2025-02-04 15:34:49.222 DEBUG] Packet Received
+[2025-02-04 15:34:49.335 DEBUG] Packet Received
+[2025-02-04 15:34:49.350 DEBUG] Packet Received
+[2025-02-04 15:34:49.463 DEBUG] Packet Received
+[2025-02-04 15:34:49.767 DEBUG] Packet Received
+[2025-02-04 15:34:49.783 DEBUG] Packet Received
+[2025-02-04 15:34:49.895 DEBUG] Packet Received
+[2025-02-04 15:34:49.926 DEBUG] Packet Received
+[2025-02-04 15:34:50.022 DEBUG] Packet Received
+[2025-02-04 15:34:50.327 DEBUG] Packet Received
+[2025-02-04 15:34:50.358 DEBUG] Packet Received
+[2025-02-04 15:34:50.455 DEBUG] Packet Received
+[2025-02-04 15:34:50.486 DEBUG] Packet Received
+[2025-02-04 15:34:50.583 DEBUG] Packet Received
+[2025-02-04 15:34:50.886 DEBUG] Packet Received
+[2025-02-04 15:34:50.918 DEBUG] Packet Received
+[2025-02-04 15:34:51.030 DEBUG] Packet Received
+[2025-02-04 15:34:51.046 DEBUG] Packet Received
+[2025-02-04 15:34:51.158 DEBUG] Packet Received
+[2025-02-04 15:34:51.462 DEBUG] Packet Received
+[2025-02-04 15:34:51.478 DEBUG] Packet Received
+[2025-02-04 15:34:51.590 DEBUG] Packet Received
+[2025-02-04 15:34:51.606 DEBUG] Packet Received
+[2025-02-04 15:34:51.718 DEBUG] Packet Received
+[2025-02-04 15:34:52.022 DEBUG] Packet Received
+[2025-02-04 15:34:52.038 DEBUG] Packet Received
+[2025-02-04 15:34:52.150 DEBUG] Packet Received
+[2025-02-04 15:34:52.182 DEBUG] Packet Received
+[2025-02-04 15:34:52.278 DEBUG] Packet Received
+[2025-02-04 15:34:52.583 DEBUG] Packet Received
+[2025-02-04 15:34:52.614 DEBUG] Packet Received
+[2025-02-04 15:34:52.790 DEBUG] Packet Received
+[2025-02-04 15:34:52.822 DEBUG] Packet Received
+[2025-02-04 15:34:52.920 DEBUG] Packet Received
+[2025-02-04 15:34:53.222 DEBUG] Packet Received
+[2025-02-04 15:34:53.254 DEBUG] Packet Received
+[2025-02-04 15:34:53.350 DEBUG] Packet Received
+[2025-02-04 15:34:53.382 DEBUG] Packet Received
+[2025-02-04 15:34:53.495 DEBUG] Packet Received
+[2025-02-04 15:34:53.782 DEBUG] Packet Received
+[2025-02-04 15:34:53.814 DEBUG] Packet Received
+[2025-02-04 15:34:53.927 DEBUG] Packet Received
+[2025-02-04 15:34:53.943 DEBUG] Packet Received
+[2025-02-04 15:34:54.054 DEBUG] Packet Received
+[2025-02-04 15:34:54.358 DEBUG] Packet Received
+[2025-02-04 15:34:54.374 DEBUG] Packet Received
+[2025-02-04 15:34:54.486 DEBUG] Packet Received
+[2025-02-04 15:34:54.502 DEBUG] Packet Received
+[2025-02-04 15:34:54.614 DEBUG] Packet Received
+[2025-02-04 15:34:54.918 DEBUG] Packet Received
+[2025-02-04 15:34:54.934 DEBUG] Packet Received
+[2025-02-04 15:34:55.047 DEBUG] Packet Received
+[2025-02-04 15:34:55.078 DEBUG] Packet Received
+[2025-02-04 15:34:55.175 DEBUG] Packet Received
+[2025-02-04 15:34:55.478 DEBUG] Packet Received
+[2025-02-04 15:34:55.511 DEBUG] Packet Received
+[2025-02-04 15:34:55.606 DEBUG] Packet Received
+[2025-02-04 15:34:55.638 DEBUG] Packet Received
+[2025-02-04 15:34:55.750 DEBUG] Packet Received
+[2025-02-04 15:34:56.054 DEBUG] Packet Received
+[2025-02-04 15:34:56.070 DEBUG] Packet Received
+[2025-02-04 15:34:56.182 DEBUG] Packet Received
+[2025-02-04 15:34:56.198 DEBUG] Packet Received
+[2025-02-04 15:34:56.310 DEBUG] Packet Received
+[2025-02-04 15:34:56.614 DEBUG] Packet Received
+[2025-02-04 15:34:56.630 DEBUG] Packet Received
+[2025-02-04 15:34:56.742 DEBUG] Packet Received
+[2025-02-04 15:34:56.758 DEBUG] Packet Received
+[2025-02-04 15:34:56.870 DEBUG] Packet Received
+[2025-02-04 15:34:57.174 DEBUG] Packet Received
+[2025-02-04 15:34:57.206 DEBUG] Packet Received
+[2025-02-04 15:34:57.302 DEBUG] Packet Received
+[2025-02-04 15:34:57.334 DEBUG] Packet Received
+[2025-02-04 15:34:57.430 DEBUG] Packet Received
+[2025-02-04 15:34:57.734 DEBUG] Packet Received
+[2025-02-04 15:34:57.766 DEBUG] Packet Received
+[2025-02-04 15:34:57.862 DEBUG] Packet Received
+[2025-02-04 15:34:57.893 DEBUG] Packet Received
+[2025-02-04 15:34:58.006 DEBUG] Packet Received
+[2025-02-04 15:34:58.310 DEBUG] Packet Received
+[2025-02-04 15:34:58.325 DEBUG] Packet Received
+[2025-02-04 15:34:58.438 DEBUG] Packet Received
+[2025-02-04 15:34:58.454 DEBUG] Packet Received
+[2025-02-04 15:34:58.566 DEBUG] Packet Received
+[2025-02-04 15:34:58.870 DEBUG] Packet Received
+[2025-02-04 15:34:58.902 DEBUG] Packet Received
+[2025-02-04 15:34:58.998 DEBUG] Packet Received
+[2025-02-04 15:34:59.030 DEBUG] Packet Received
+[2025-02-04 15:34:59.125 DEBUG] Packet Received
+[2025-02-04 15:34:59.430 DEBUG] Packet Received
+[2025-02-04 15:34:59.462 DEBUG] Packet Received
+[2025-02-04 15:34:59.574 DEBUG] Packet Received
+[2025-02-04 15:34:59.590 DEBUG] Packet Received
+[2025-02-04 15:34:59.702 DEBUG] Packet Received
+[2025-02-04 15:35:00.006 DEBUG] Packet Received
+[2025-02-04 15:35:00.022 DEBUG] Packet Received
+[2025-02-04 15:35:00.134 DEBUG] Packet Received
+[2025-02-04 15:35:00.150 DEBUG] Packet Received
+[2025-02-04 15:35:00.262 DEBUG] Packet Received
+[2025-02-04 15:35:00.566 DEBUG] Packet Received
+[2025-02-04 15:35:00.582 DEBUG] Packet Received
+[2025-02-04 15:35:00.693 DEBUG] Packet Received
+[2025-02-04 15:35:00.726 DEBUG] Packet Received
+[2025-02-04 15:35:00.821 DEBUG] Packet Received
+[2025-02-04 15:35:01.125 DEBUG] Packet Received
+[2025-02-04 15:35:01.157 DEBUG] Packet Received
+[2025-02-04 15:35:01.253 DEBUG] Packet Received
+[2025-02-04 15:35:01.286 DEBUG] Packet Received
+[2025-02-04 15:35:01.397 DEBUG] Packet Received
+[2025-02-04 15:35:01.686 DEBUG] Packet Received
+[2025-02-04 15:35:01.718 DEBUG] Packet Received
+[2025-02-04 15:35:01.831 DEBUG] Packet Received
+[2025-02-04 15:35:01.846 DEBUG] Packet Received
+[2025-02-04 15:35:01.957 DEBUG] Packet Received
+[2025-02-04 15:35:02.262 DEBUG] Packet Received
+[2025-02-04 15:35:02.278 DEBUG] Packet Received
+[2025-02-04 15:35:02.390 DEBUG] Packet Received
+[2025-02-04 15:35:02.405 DEBUG] Packet Received
+[2025-02-04 15:35:02.518 DEBUG] Packet Received
+[2025-02-04 15:35:02.821 DEBUG] Packet Received
+[2025-02-04 15:35:02.837 DEBUG] Packet Received
+[2025-02-04 15:35:02.949 DEBUG] Packet Received
+[2025-02-04 15:35:02.965 DEBUG] Packet Received
+[2025-02-04 15:35:03.078 DEBUG] Packet Received
+[2025-02-04 15:35:03.381 DEBUG] Packet Received
+[2025-02-04 15:35:03.413 DEBUG] Packet Received
+[2025-02-04 15:35:03.509 DEBUG] Packet Received
+[2025-02-04 15:35:03.541 DEBUG] Packet Received
+[2025-02-04 15:35:03.637 DEBUG] Packet Received
+[2025-02-04 15:35:03.941 DEBUG] Packet Received
+[2025-02-04 15:35:03.973 DEBUG] Packet Received
+[2025-02-04 15:35:04.086 DEBUG] Packet Received
+[2025-02-04 15:35:04.102 DEBUG] Packet Received
+[2025-02-04 15:35:04.214 DEBUG] Packet Received
+[2025-02-04 15:35:04.518 DEBUG] Packet Received
+[2025-02-04 15:35:04.533 DEBUG] Packet Received
+[2025-02-04 15:35:04.646 DEBUG] Packet Received
+[2025-02-04 15:35:04.662 DEBUG] Packet Received
+[2025-02-04 15:35:04.774 DEBUG] Packet Received
+[2025-02-04 15:35:05.078 DEBUG] Packet Received
+[2025-02-04 15:35:05.109 DEBUG] Packet Received
+[2025-02-04 15:35:05.206 DEBUG] Packet Received
+[2025-02-04 15:35:05.237 DEBUG] Packet Received
+[2025-02-04 15:35:05.334 DEBUG] Packet Received
+[2025-02-04 15:35:05.638 DEBUG] Packet Received
+[2025-02-04 15:35:05.669 DEBUG] Packet Received
+[2025-02-04 15:35:05.765 DEBUG] Packet Received
+[2025-02-04 15:35:05.797 DEBUG] Packet Received
+[2025-02-04 15:35:05.909 DEBUG] Packet Received
+[2025-02-04 15:35:06.213 DEBUG] Packet Received
+[2025-02-04 15:35:06.229 DEBUG] Packet Received
+[2025-02-04 15:35:06.341 DEBUG] Packet Received
+[2025-02-04 15:35:06.357 DEBUG] Packet Received
+[2025-02-04 15:35:06.469 DEBUG] Packet Received
+[2025-02-04 15:35:06.773 DEBUG] Packet Received
+[2025-02-04 15:35:06.789 DEBUG] Packet Received
+[2025-02-04 15:35:06.901 DEBUG] Packet Received
+[2025-02-04 15:35:06.933 DEBUG] Packet Received
+[2025-02-04 15:35:07.030 DEBUG] Packet Received
+[2025-02-04 15:35:07.333 DEBUG] Packet Received
+[2025-02-04 15:35:07.365 DEBUG] Packet Received
+[2025-02-04 15:35:07.461 DEBUG] Packet Received
+[2025-02-04 15:35:07.493 DEBUG] Packet Received
+[2025-02-04 15:35:07.605 DEBUG] Packet Received
+[2025-02-04 15:35:07.909 DEBUG] Packet Received
+[2025-02-04 15:35:07.925 DEBUG] Packet Received
+[2025-02-04 15:35:08.037 DEBUG] Packet Received
+[2025-02-04 15:35:08.053 DEBUG] Packet Received
+[2025-02-04 15:35:08.165 DEBUG] Packet Received
+[2025-02-04 15:35:08.469 DEBUG] Packet Received
+[2025-02-04 15:35:08.485 DEBUG] Packet Received
+[2025-02-04 15:35:08.597 DEBUG] Packet Received
+[2025-02-04 15:35:08.613 DEBUG] Packet Received
+[2025-02-04 15:35:08.725 DEBUG] Packet Received
+[2025-02-04 15:35:09.029 DEBUG] Packet Received
+[2025-02-04 15:35:09.061 DEBUG] Packet Received
+[2025-02-04 15:35:09.157 DEBUG] Packet Received
+[2025-02-04 15:35:09.189 DEBUG] Packet Received
+[2025-02-04 15:35:09.285 DEBUG] Packet Received
+[2025-02-04 15:35:09.589 DEBUG] Packet Received
+[2025-02-04 15:35:09.621 DEBUG] Packet Received
+[2025-02-04 15:35:09.733 DEBUG] Packet Received
+[2025-02-04 15:35:09.749 DEBUG] Packet Received
+[2025-02-04 15:35:09.861 DEBUG] Packet Received
+[2025-02-04 15:35:10.166 DEBUG] Packet Received
+[2025-02-04 15:35:10.181 DEBUG] Packet Received
+[2025-02-04 15:35:10.294 DEBUG] Packet Received
+[2025-02-04 15:35:10.309 DEBUG] Packet Received
+[2025-02-04 15:35:10.422 DEBUG] Packet Received
+[2025-02-04 15:35:10.725 DEBUG] Packet Received
+[2025-02-04 15:35:10.757 DEBUG] Packet Received
+[2025-02-04 15:35:10.853 DEBUG] Packet Received
+[2025-02-04 15:35:10.885 DEBUG] Packet Received
+[2025-02-04 15:35:10.982 DEBUG] Packet Received
+[2025-02-04 15:35:11.286 DEBUG] Packet Received
+[2025-02-04 15:35:11.317 DEBUG] Packet Received
+[2025-02-04 15:35:11.429 DEBUG] Packet Received
+[2025-02-04 15:35:11.445 DEBUG] Packet Received
+[2025-02-04 15:35:11.557 DEBUG] Packet Received
+[2025-02-04 15:35:11.860 DEBUG] Packet Received
+[2025-02-04 15:35:11.876 DEBUG] Packet Received
+[2025-02-04 15:35:11.989 DEBUG] Packet Received
+[2025-02-04 15:35:12.005 DEBUG] Packet Received
+[2025-02-04 15:35:12.117 DEBUG] Packet Received
+[2025-02-04 15:35:12.420 DEBUG] Packet Received
+[2025-02-04 15:35:12.437 DEBUG] Packet Received
+[2025-02-04 15:35:12.549 DEBUG] Packet Received
+[2025-02-04 15:35:12.565 DEBUG] Packet Received
+[2025-02-04 15:35:12.677 DEBUG] Packet Received
+[2025-02-04 15:35:12.980 DEBUG] Packet Received
+[2025-02-04 15:35:13.012 DEBUG] Packet Received
+[2025-02-04 15:35:13.188 DEBUG] Packet Received
+[2025-02-04 15:35:13.220 DEBUG] Packet Received
+[2025-02-04 15:35:13.316 DEBUG] Packet Received
+[2025-02-04 15:35:13.620 DEBUG] Packet Received
+[2025-02-04 15:35:13.653 DEBUG] Packet Received
+[2025-02-04 15:35:13.749 DEBUG] Packet Received
+[2025-02-04 15:35:13.781 DEBUG] Packet Received
+[2025-02-04 15:35:13.876 DEBUG] Packet Received
+[2025-02-04 15:35:14.181 DEBUG] Packet Received
+[2025-02-04 15:35:14.213 DEBUG] Packet Received
+[2025-02-04 15:35:14.325 DEBUG] Packet Received
+[2025-02-04 15:35:14.341 DEBUG] Packet Received
+[2025-02-04 15:35:14.452 DEBUG] Packet Received
+[2025-02-04 15:35:14.757 DEBUG] Packet Received
+[2025-02-04 15:35:14.772 DEBUG] Packet Received
+[2025-02-04 15:35:14.885 DEBUG] Packet Received
+[2025-02-04 15:35:14.901 DEBUG] Packet Received
+[2025-02-04 15:35:15.013 DEBUG] Packet Received
+[2025-02-04 15:35:15.316 DEBUG] Packet Received
+[2025-02-04 15:35:15.332 DEBUG] Packet Received
+[2025-02-04 15:35:15.461 DEBUG] Packet Received
+[2025-02-04 15:35:15.493 DEBUG] Packet Received
+[2025-02-04 15:35:15.604 DEBUG] Packet Received
+[2025-02-04 15:35:15.620 DEBUG] Packet Received
+[2025-02-04 15:35:15.732 DEBUG] Packet Received
+[2025-02-04 15:35:16.036 DEBUG] Packet Received
+[2025-02-04 15:35:16.052 DEBUG] Packet Received
+[2025-02-04 15:35:16.165 DEBUG] Packet Received
+[2025-02-04 15:35:16.180 DEBUG] Packet Received
+[2025-02-04 15:35:16.292 DEBUG] Packet Received
+[2025-02-04 15:35:16.596 DEBUG] Packet Received
+[2025-02-04 15:35:16.628 DEBUG] Packet Received
+[2025-02-04 15:35:16.724 DEBUG] Packet Received
+[2025-02-04 15:35:16.756 DEBUG] Packet Received
+[2025-02-04 15:35:16.868 DEBUG] Packet Received
+[2025-02-04 15:35:17.173 DEBUG] Packet Received
+[2025-02-04 15:35:17.189 DEBUG] Packet Received
+[2025-02-04 15:35:17.300 DEBUG] Packet Received
+[2025-02-04 15:35:17.317 DEBUG] Packet Received
+[2025-02-04 15:35:17.428 DEBUG] Packet Received
+[2025-02-04 15:35:17.732 DEBUG] Packet Received
+[2025-02-04 15:35:17.748 DEBUG] Packet Received
+[2025-02-04 15:35:17.860 DEBUG] Packet Received
+[2025-02-04 15:35:17.876 DEBUG] Packet Received
+[2025-02-04 15:35:17.989 DEBUG] Packet Received
+[2025-02-04 15:35:18.292 DEBUG] Packet Received
+[2025-02-04 15:35:18.324 DEBUG] Packet Received
+[2025-02-04 15:35:18.420 DEBUG] Packet Received
+[2025-02-04 15:35:18.452 DEBUG] Packet Received
+[2025-02-04 15:35:18.564 DEBUG] Packet Received
+[2025-02-04 15:35:18.868 DEBUG] Packet Received
+[2025-02-04 15:35:18.884 DEBUG] Packet Received
+[2025-02-04 15:35:18.996 DEBUG] Packet Received
+[2025-02-04 15:35:19.012 DEBUG] Packet Received
+[2025-02-04 15:35:19.124 DEBUG] Packet Received
+[2025-02-04 15:35:19.429 DEBUG] Packet Received
+[2025-02-04 15:35:19.445 DEBUG] Packet Received
+[2025-02-04 15:35:19.556 DEBUG] Packet Received
+[2025-02-04 15:35:19.572 DEBUG] Packet Received
+[2025-02-04 15:35:19.684 DEBUG] Packet Received
+[2025-02-04 15:35:19.988 DEBUG] Packet Received
+[2025-02-04 15:35:20.004 DEBUG] Packet Received
+[2025-02-04 15:35:20.116 DEBUG] Packet Received
+[2025-02-04 15:35:20.148 DEBUG] Packet Received
+[2025-02-04 15:35:20.245 DEBUG] Packet Received
+[2025-02-04 15:35:20.548 DEBUG] Packet Received
+[2025-02-04 15:35:20.580 DEBUG] Packet Received
+[2025-02-04 15:35:20.676 DEBUG] Packet Received
+[2025-02-04 15:35:20.708 DEBUG] Packet Received
+[2025-02-04 15:35:20.820 DEBUG] Packet Received
+[2025-02-04 15:35:21.124 DEBUG] Packet Received
+[2025-02-04 15:35:21.140 DEBUG] Packet Received
+[2025-02-04 15:35:21.252 DEBUG] Packet Received
+[2025-02-04 15:35:21.268 DEBUG] Packet Received
+[2025-02-04 15:35:21.380 DEBUG] Packet Received
+[2025-02-04 15:35:21.684 DEBUG] Packet Received
+[2025-02-04 15:35:21.700 DEBUG] Packet Received
+[2025-02-04 15:35:21.812 DEBUG] Packet Received
+[2025-02-04 15:35:21.828 DEBUG] Packet Received
+[2025-02-04 15:35:21.940 DEBUG] Packet Received
+[2025-02-04 15:35:22.244 DEBUG] Packet Received
+[2025-02-04 15:35:22.276 DEBUG] Packet Received
+[2025-02-04 15:35:22.372 DEBUG] Packet Received
+[2025-02-04 15:35:22.404 DEBUG] Packet Received
+[2025-02-04 15:35:22.501 DEBUG] Packet Received
+[2025-02-04 15:35:22.804 DEBUG] Packet Received
+[2025-02-04 15:35:22.836 DEBUG] Packet Received
+[2025-02-04 15:35:22.948 DEBUG] Packet Received
+[2025-02-04 15:35:22.964 DEBUG] Packet Received
+[2025-02-04 15:35:23.077 DEBUG] Packet Received
+[2025-02-04 15:35:23.379 DEBUG] Packet Received
+[2025-02-04 15:35:23.395 DEBUG] Packet Received
+[2025-02-04 15:35:23.508 DEBUG] Packet Received
+[2025-02-04 15:35:23.524 DEBUG] Packet Received
+[2025-02-04 15:35:23.636 DEBUG] Packet Received
+[2025-02-04 15:35:23.939 DEBUG] Packet Received
+[2025-02-04 15:35:23.955 DEBUG] Packet Received
+[2025-02-04 15:35:24.068 DEBUG] Packet Received
+[2025-02-04 15:35:24.099 DEBUG] Packet Received
+[2025-02-04 15:35:24.195 DEBUG] Packet Received
+[2025-02-04 15:35:24.499 DEBUG] Packet Received
+[2025-02-04 15:35:24.531 DEBUG] Packet Received
+[2025-02-04 15:35:24.627 DEBUG] Packet Received
+[2025-02-04 15:35:24.660 DEBUG] Packet Received
+[2025-02-04 15:35:24.771 DEBUG] Packet Received
+[2025-02-04 15:35:25.076 DEBUG] Packet Received
+[2025-02-04 15:35:25.092 DEBUG] Packet Received
+[2025-02-04 15:35:25.204 DEBUG] Packet Received
+[2025-02-04 15:35:25.219 DEBUG] Packet Received
+[2025-02-04 15:35:25.331 DEBUG] Packet Received
+[2025-02-04 15:35:25.635 DEBUG] Packet Received
+[2025-02-04 15:35:25.652 DEBUG] Packet Received
+[2025-02-04 15:35:25.764 DEBUG] Packet Received
+[2025-02-04 15:35:25.795 DEBUG] Packet Received
+[2025-02-04 15:35:25.892 DEBUG] Packet Received
+[2025-02-04 15:35:26.196 DEBUG] Packet Received
+[2025-02-04 15:35:26.227 DEBUG] Packet Received
+[2025-02-04 15:35:26.323 DEBUG] Packet Received
+[2025-02-04 15:35:26.355 DEBUG] Packet Received
+[2025-02-04 15:35:26.467 DEBUG] Packet Received
+[2025-02-04 15:35:26.771 DEBUG] Packet Received
+[2025-02-04 15:35:26.788 DEBUG] Packet Received
+[2025-02-04 15:35:26.900 DEBUG] Packet Received
+[2025-02-04 15:35:26.915 DEBUG] Packet Received
+[2025-02-04 15:35:27.027 DEBUG] Packet Received
+[2025-02-04 15:35:27.331 DEBUG] Packet Received
+[2025-02-04 15:35:27.348 DEBUG] Packet Received
+[2025-02-04 15:35:27.461 DEBUG] Packet Received
+[2025-02-04 15:35:27.492 DEBUG] Packet Received
+[2025-02-04 15:35:27.588 DEBUG] Packet Received
+[2025-02-04 15:35:27.892 DEBUG] Packet Received
+[2025-02-04 15:35:27.923 DEBUG] Packet Received
+[2025-02-04 15:35:28.020 DEBUG] Packet Received
+[2025-02-04 15:35:28.051 DEBUG] Packet Received
+[2025-02-04 15:35:28.163 DEBUG] Packet Received
+[2025-02-04 15:35:28.467 DEBUG] Packet Received
+[2025-02-04 15:35:28.483 DEBUG] Packet Received
+[2025-02-04 15:35:28.595 DEBUG] Packet Received
+[2025-02-04 15:35:28.611 DEBUG] Packet Received
+[2025-02-04 15:35:28.723 DEBUG] Packet Received
+[2025-02-04 15:35:29.027 DEBUG] Packet Received
+[2025-02-04 15:35:29.043 DEBUG] Packet Received
+[2025-02-04 15:35:29.155 DEBUG] Packet Received
+[2025-02-04 15:35:29.171 DEBUG] Packet Received
+[2025-02-04 15:35:29.283 DEBUG] Packet Received
+[2025-02-04 15:35:29.588 DEBUG] Packet Received
+[2025-02-04 15:35:29.619 DEBUG] Packet Received
+[2025-02-04 15:35:29.716 DEBUG] Packet Received
+[2025-02-04 15:35:29.747 DEBUG] Packet Received
+[2025-02-04 15:35:29.859 DEBUG] Packet Received
+[2025-02-04 15:35:30.163 DEBUG] Packet Received
+[2025-02-04 15:35:30.179 DEBUG] Packet Received
+[2025-02-04 15:35:30.291 DEBUG] Packet Received
+[2025-02-04 15:35:30.307 DEBUG] Packet Received
+[2025-02-04 15:35:30.419 DEBUG] Packet Received
+[2025-02-04 15:35:30.723 DEBUG] Packet Received
+[2025-02-04 15:35:30.739 DEBUG] Packet Received
+[2025-02-04 15:35:30.851 DEBUG] Packet Received
+[2025-02-04 15:35:30.867 DEBUG] Packet Received
+[2025-02-04 15:35:30.979 DEBUG] Packet Received
+[2025-02-04 15:35:31.283 DEBUG] Packet Received
+[2025-02-04 15:35:31.315 DEBUG] Packet Received
+[2025-02-04 15:35:31.411 DEBUG] Packet Received
+[2025-02-04 15:35:31.444 DEBUG] Packet Received
+[2025-02-04 15:35:31.555 DEBUG] Packet Received
+[2025-02-04 15:35:31.843 DEBUG] Packet Received
+[2025-02-04 15:35:31.876 DEBUG] Packet Received
+[2025-02-04 15:35:31.988 DEBUG] Packet Received
+[2025-02-04 15:35:32.003 DEBUG] Packet Received
+[2025-02-04 15:35:32.115 DEBUG] Packet Received
+[2025-02-04 15:35:32.420 DEBUG] Packet Received
+[2025-02-04 15:35:32.436 DEBUG] Packet Received
+[2025-02-04 15:35:32.547 DEBUG] Packet Received
+[2025-02-04 15:35:32.563 DEBUG] Packet Received
+[2025-02-04 15:35:32.676 DEBUG] Packet Received
+[2025-02-04 15:35:32.980 DEBUG] Packet Received
+[2025-02-04 15:35:33.011 DEBUG] Packet Received
+[2025-02-04 15:35:33.107 DEBUG] Packet Received
+[2025-02-04 15:35:33.139 DEBUG] Packet Received
+[2025-02-04 15:35:33.235 DEBUG] Packet Received
+[2025-02-04 15:35:33.540 DEBUG] Packet Received
+[2025-02-04 15:35:33.571 DEBUG] Packet Received
+[2025-02-04 15:35:33.747 DEBUG] Packet Received
+[2025-02-04 15:35:33.779 DEBUG] Packet Received
+[2025-02-04 15:35:33.876 DEBUG] Packet Received
+[2025-02-04 15:35:34.179 DEBUG] Packet Received
+[2025-02-04 15:35:34.211 DEBUG] Packet Received
+[2025-02-04 15:35:34.307 DEBUG] Packet Received
+[2025-02-04 15:35:34.339 DEBUG] Packet Received
+[2025-02-04 15:35:34.451 DEBUG] Packet Received
+[2025-02-04 15:35:34.756 DEBUG] Packet Received
+[2025-02-04 15:35:34.771 DEBUG] Packet Received
+[2025-02-04 15:35:34.884 DEBUG] Packet Received
+[2025-02-04 15:35:34.900 DEBUG] Packet Received
+[2025-02-04 15:35:35.011 DEBUG] Packet Received
+[2025-02-04 15:35:35.315 DEBUG] Packet Received
+[2025-02-04 15:35:35.331 DEBUG] Packet Received
+[2025-02-04 15:35:35.443 DEBUG] Packet Received
+[2025-02-04 15:35:35.458 DEBUG] Packet Received
+[2025-02-04 15:35:35.570 DEBUG] Packet Received
+[2025-02-04 15:35:35.875 DEBUG] Packet Received
+[2025-02-04 15:35:35.907 DEBUG] Packet Received
+[2025-02-04 15:35:36.003 DEBUG] Packet Received
+[2025-02-04 15:35:36.035 DEBUG] Packet Received
+[2025-02-04 15:35:36.131 DEBUG] Packet Received
+[2025-02-04 15:35:36.434 DEBUG] Packet Received
+[2025-02-04 15:35:36.466 DEBUG] Packet Received
+[2025-02-04 15:35:36.563 DEBUG] Packet Received
+[2025-02-04 15:35:36.595 DEBUG] Packet Received
+[2025-02-04 15:35:36.707 DEBUG] Packet Received
+[2025-02-04 15:35:37.011 DEBUG] Packet Received
+[2025-02-04 15:35:37.026 DEBUG] Packet Received
+[2025-02-04 15:35:37.138 DEBUG] Packet Received
+[2025-02-04 15:35:37.155 DEBUG] Packet Received
+[2025-02-04 15:35:37.266 DEBUG] Packet Received
+[2025-02-04 15:35:37.571 DEBUG] Packet Received
+[2025-02-04 15:35:37.875 DEBUG] Packet Received
+[2025-02-04 15:35:38.179 DEBUG] Packet Received
+[2025-02-04 15:35:38.195 DEBUG] Packet Received
+[2025-02-04 15:35:38.306 DEBUG] Packet Received
+[2025-02-04 15:35:38.322 DEBUG] Packet Received
+[2025-02-04 15:35:38.435 DEBUG] Packet Received
+[2025-02-04 15:35:38.739 DEBUG] Packet Received
+[2025-02-04 15:35:38.755 DEBUG] Packet Received
+[2025-02-04 15:35:38.866 DEBUG] Packet Received
+[2025-02-04 15:35:38.898 DEBUG] Packet Received
+[2025-02-04 15:35:38.995 DEBUG] Packet Received
+[2025-02-04 15:35:39.299 DEBUG] Packet Received
+[2025-02-04 15:35:39.330 DEBUG] Packet Received
+[2025-02-04 15:35:39.427 DEBUG] Packet Received
+[2025-02-04 15:35:39.458 DEBUG] Packet Received
+[2025-02-04 15:35:39.571 DEBUG] Packet Received
+[2025-02-04 15:35:39.874 DEBUG] Packet Received
+[2025-02-04 15:35:39.890 DEBUG] Packet Received
+[2025-02-04 15:35:40.003 DEBUG] Packet Received
+[2025-02-04 15:35:40.019 DEBUG] Packet Received
+[2025-02-04 15:35:40.131 DEBUG] Packet Received
+[2025-02-04 15:35:40.435 DEBUG] Packet Received
+[2025-02-04 15:35:40.451 DEBUG] Packet Received
+[2025-02-04 15:35:40.563 DEBUG] Packet Received
+[2025-02-04 15:35:40.579 DEBUG] Packet Received
+[2025-02-04 15:35:40.691 DEBUG] Packet Received
+[2025-02-04 15:35:40.995 DEBUG] Packet Received
+[2025-02-04 15:35:41.026 DEBUG] Packet Received
+[2025-02-04 15:35:41.123 DEBUG] Packet Received
+[2025-02-04 15:35:41.155 DEBUG] Packet Received
+[2025-02-04 15:35:41.251 DEBUG] Packet Received
+[2025-02-04 15:35:41.554 DEBUG] Packet Received
+[2025-02-04 15:35:41.586 DEBUG] Packet Received
+[2025-02-04 15:35:41.698 DEBUG] Packet Received
+[2025-02-04 15:35:41.715 DEBUG] Packet Received
+[2025-02-04 15:35:41.826 DEBUG] Packet Received
+[2025-02-04 15:35:42.130 DEBUG] Packet Received
+[2025-02-04 15:35:42.146 DEBUG] Packet Received
+[2025-02-04 15:35:42.258 DEBUG] Packet Received
+[2025-02-04 15:35:42.274 DEBUG] Packet Received
+[2025-02-04 15:35:42.386 DEBUG] Packet Received
+[2025-02-04 15:35:42.690 DEBUG] Packet Received
+[2025-02-04 15:35:42.707 DEBUG] Packet Received
+[2025-02-04 15:35:42.819 DEBUG] Packet Received
+[2025-02-04 15:35:42.850 DEBUG] Packet Received
+[2025-02-04 15:35:42.946 DEBUG] Packet Received
+[2025-02-04 15:35:43.251 DEBUG] Packet Received
+[2025-02-04 15:35:43.282 DEBUG] Packet Received
+[2025-02-04 15:35:43.378 DEBUG] Packet Received
+[2025-02-04 15:35:43.410 DEBUG] Packet Received
+[2025-02-04 15:35:43.506 DEBUG] Packet Received
+[2025-02-04 15:35:43.810 DEBUG] Packet Received
+[2025-02-04 15:35:43.842 DEBUG] Packet Received
+[2025-02-04 15:35:43.954 DEBUG] Packet Received
+[2025-02-04 15:35:43.970 DEBUG] Packet Received
+[2025-02-04 15:35:44.082 DEBUG] Packet Received
+[2025-02-04 15:35:44.386 DEBUG] Packet Received
+[2025-02-04 15:35:44.402 DEBUG] Packet Received
+[2025-02-04 15:35:44.514 DEBUG] Packet Received
+[2025-02-04 15:35:44.530 DEBUG] Packet Received
+[2025-02-04 15:35:44.642 DEBUG] Packet Received
+[2025-02-04 15:35:44.946 DEBUG] Packet Received
+[2025-02-04 15:35:44.978 DEBUG] Packet Received
+[2025-02-04 15:35:45.074 DEBUG] Packet Received
+[2025-02-04 15:35:45.106 DEBUG] Packet Received
+[2025-02-04 15:35:45.202 DEBUG] Packet Received
+[2025-02-04 15:35:45.506 DEBUG] Packet Received
+[2025-02-04 15:35:45.538 DEBUG] Packet Received
+[2025-02-04 15:35:45.666 DEBUG] Packet Received
+[2025-02-04 15:35:45.682 DEBUG] Packet Received
+[2025-02-04 15:35:45.794 DEBUG] Packet Received
+[2025-02-04 15:35:45.826 DEBUG] Packet Received
+[2025-02-04 15:35:45.923 DEBUG] Packet Received
+[2025-02-04 15:35:46.226 DEBUG] Packet Received
+[2025-02-04 15:35:46.258 DEBUG] Packet Received
+[2025-02-04 15:35:46.354 DEBUG] Packet Received
+[2025-02-04 15:35:46.386 DEBUG] Packet Received
+[2025-02-04 15:35:46.499 DEBUG] Packet Received
+[2025-02-04 15:35:46.802 DEBUG] Packet Received
+[2025-02-04 15:35:46.818 DEBUG] Packet Received
+[2025-02-04 15:35:46.931 DEBUG] Packet Received
+[2025-02-04 15:35:46.947 DEBUG] Packet Received
+[2025-02-04 15:35:47.058 DEBUG] Packet Received
+[2025-02-04 15:35:47.362 DEBUG] Packet Received
+[2025-02-04 15:35:47.378 DEBUG] Packet Received
+[2025-02-04 15:35:47.490 DEBUG] Packet Received
+[2025-02-04 15:35:47.522 DEBUG] Packet Received
+[2025-02-04 15:35:47.617 DEBUG] Packet Received
+[2025-02-04 15:35:47.921 DEBUG] Packet Received
+[2025-02-04 15:35:47.953 DEBUG] Packet Received
+[2025-02-04 15:35:48.050 DEBUG] Packet Received
+[2025-02-04 15:35:48.081 DEBUG] Packet Received
+[2025-02-04 15:35:48.194 DEBUG] Packet Received
+[2025-02-04 15:35:48.498 DEBUG] Packet Received
+[2025-02-04 15:35:48.513 DEBUG] Packet Received
+[2025-02-04 15:35:48.625 DEBUG] Packet Received
+[2025-02-04 15:35:48.641 DEBUG] Packet Received
+[2025-02-04 15:35:48.755 DEBUG] Packet Received
+[2025-02-04 15:38:56.877 DEBUG] Port num : 0
+[2025-02-04 15:38:56.878 DEBUG] Port name : COM4
+[2025-02-04 15:38:56.878 DEBUG] MFR : (Undefined Vendor)
+[2025-02-04 15:38:56.878 DEBUG] Product : ATLink-Bridge(COM4)
+[2025-02-04 15:38:56.878 DEBUG] Serial : 1E730D000080C0200C959107
+[2025-02-04 15:38:56.878 DEBUG] 
+[2025-02-04 15:38:56.878 DEBUG] Port num : 1
+[2025-02-04 15:38:56.878 DEBUG] Port name : COM3
+[2025-02-04 15:38:56.878 DEBUG] MFR : FTDI
+[2025-02-04 15:38:56.878 DEBUG] Product : USB Serial Port(COM3)
+[2025-02-04 15:38:56.878 DEBUG] Serial : DK0GDTJVA
+[2025-02-04 15:38:56.878 DEBUG] 
+[2025-02-04 15:38:56.878 DEBUG] Port num : 2
+[2025-02-04 15:38:56.878 DEBUG] Port name : COM5
+[2025-02-04 15:38:56.879 DEBUG] MFR : (Undefined Vendor)
+[2025-02-04 15:38:56.879 DEBUG] Product : ATLink-USART(COM5)
+[2025-02-04 15:38:56.879 DEBUG] Serial : 1E730D000080C0200C959107
+[2025-02-04 15:38:56.879 DEBUG] 
+[2025-02-04 15:38:56.880 DEBUG] Port names : ["COM4", "COM3", "COM5"]
+[2025-02-04 15:38:56.929 DEBUG] Packet Received
+[2025-02-04 15:38:56.945 DEBUG] Packet Received
+[2025-02-04 15:38:57.059 DEBUG] Packet Received
+[2025-02-04 15:38:57.073 DEBUG] Packet Received
+[2025-02-04 15:38:57.186 DEBUG] Packet Received
+[2025-02-04 15:38:57.489 DEBUG] Packet Received
+[2025-02-04 15:38:57.505 DEBUG] Packet Received
+[2025-02-04 15:38:57.617 DEBUG] Packet Received
+[2025-02-04 15:38:57.633 DEBUG] Packet Received
+[2025-02-04 15:38:57.745 DEBUG] Packet Received
+[2025-02-04 15:38:58.049 DEBUG] Packet Received
+[2025-02-04 15:38:58.081 DEBUG] Packet Received
+[2025-02-04 15:38:58.177 DEBUG] Packet Received
+[2025-02-04 15:38:58.209 DEBUG] Packet Received
+[2025-02-04 15:38:58.305 DEBUG] Packet Received
+[2025-02-04 15:38:58.609 DEBUG] Packet Received
+[2025-02-04 15:38:58.641 DEBUG] Packet Received
+[2025-02-04 15:43:45.174 DEBUG] Port num : 0
+[2025-02-04 15:43:45.175 DEBUG] Port name : COM4
+[2025-02-04 15:43:45.175 DEBUG] MFR : (Undefined Vendor)
+[2025-02-04 15:43:45.175 DEBUG] Product : ATLink-Bridge(COM4)
+[2025-02-04 15:43:45.175 DEBUG] Serial : 1E730D000080C0200C959107
+[2025-02-04 15:43:45.175 DEBUG] 
+[2025-02-04 15:43:45.175 DEBUG] Port num : 1
+[2025-02-04 15:43:45.175 DEBUG] Port name : COM3
+[2025-02-04 15:43:45.175 DEBUG] MFR : FTDI
+[2025-02-04 15:43:45.175 DEBUG] Product : USB Serial Port(COM3)
+[2025-02-04 15:43:45.175 DEBUG] Serial : DK0GDTJVA
+[2025-02-04 15:43:45.176 DEBUG] 
+[2025-02-04 15:43:45.176 DEBUG] Port num : 2
+[2025-02-04 15:43:45.176 DEBUG] Port name : COM5
+[2025-02-04 15:43:45.176 DEBUG] MFR : (Undefined Vendor)
+[2025-02-04 15:43:45.176 DEBUG] Product : ATLink-USART(COM5)
+[2025-02-04 15:43:45.176 DEBUG] Serial : 1E730D000080C0200C959107
+[2025-02-04 15:43:45.176 DEBUG] 
+[2025-02-04 15:43:45.176 DEBUG] Port names : ["COM4", "COM3", "COM5"]
+[2025-02-04 15:43:45.211 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 99  | 00 | 01 | 02 | 02 | 01 | 02 | CB |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:45.324 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 9A  | 1B |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:45.627 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 9B  | 19 | FB | CA |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:45.642 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 9B  | 20 | 00 | 8A |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:45.754 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 9C  | 50 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:45.786 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 9C  | 00 | 01 | 02 | 02 | 01 | 02 | C8 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:45.882 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | 9D  | 1E |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:46.188 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | 9E  | 19 | FB | C1 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:46.219 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | 9E  | 20 | 00 | 85 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:46.314 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | 9F  | 4D |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:46.346 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | 9F  | 00 | 01 | 02 | 02 | 01 | 02 | CD |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:46.460 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | A0  | 21 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:46.764 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | A1  | 19 | FB | F4 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:46.778 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | A1  | 20 | 00 | C0 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:46.891 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | A2  | 72 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:46.906 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | A2  | 00 | 01 | 02 | 02 | 01 | 02 | 02 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:47.019 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | A3  | 24 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:47.322 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | A4  | 19 | FB | FB |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:47.339 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | A4  | 20 | 00 | BB |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:47.452 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | A5  | 77 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:47.467 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | A5  | 00 | 01 | 02 | 02 | 01 | 02 | 07 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:47.580 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | A6  | 27 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:47.884 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | A7  | 19 | FB | FE |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:47.915 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | A7  | 20 | 00 | BE |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:48.012 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | A8  | 7C |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:48.042 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | A8  | 00 | 01 | 02 | 02 | 01 | 02 | F4 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:48.141 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | A9  | 2A |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:48.441 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | AA  | 19 | FB | F5 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:48.474 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | AA  | 20 | 00 | B9 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:48.585 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | AB  | 79 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:48.602 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | AB  | 00 | 01 | 02 | 02 | 01 | 02 | F9 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:48.714 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | AC  | 2D |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:49.018 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | AD  | 19 | FB | F8 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:49.034 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | AD  | 20 | 00 | B4 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:49.163 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+----+----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9 | D10 | D11 | D12 | D13 | D14 | D15 | D16 | D17 | D18 | D19 | D20 | D21 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+----+----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+| 02  | C1 | 1B  | 23  | AE  | 05 | 01 | 00 | 02 | 10 | 02 | 02 | 00 | 00 | 03  | 03  | 00  | 00  | 04  | 01  | 00  | 00  | 05  | 04  | 00  | 00  | 7C |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+----+----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+
+[2025-02-04 15:43:49.194 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | A3  | AE  | 00 | 01 | 02 | 02 | 01 | 02 | C8 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:49.290 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | AF  | 7D |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:49.322 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | AF  | 00 | 01 | 02 | 02 | 01 | 02 | FD |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:49.418 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | B0  | 31 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:49.721 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | B1  | 19 | FB | E4 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:49.754 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | B1  | 20 | 00 | B0 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:49.866 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | B2  | 62 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:49.882 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | B2  | 00 | 01 | 02 | 02 | 01 | 02 | F2 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:49.994 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | B3  | 34 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:50.297 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | B4  | 19 | FB | EB |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:50.313 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | B4  | 20 | 00 | AB |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:50.428 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | B5  | 67 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:50.442 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | B5  | 00 | 01 | 02 | 02 | 01 | 02 | F7 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:50.556 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | B6  | 37 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:50.857 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | B7  | 19 | FB | EE |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:50.875 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | B7  | 20 | 00 | AE |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:50.985 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | B8  | 6C |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:51.018 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | B8  | 00 | 01 | 02 | 02 | 01 | 02 | E4 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:51.114 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | B9  | 3A |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:51.420 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | BA  | 19 | FB | E5 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:51.450 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | BA  | 20 | 00 | A9 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:51.548 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | BB  | 69 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:51.578 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | BB  | 00 | 01 | 02 | 02 | 01 | 02 | E9 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:51.691 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | BC  | 3D |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:51.996 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | BD  | 19 | FB | E8 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:52.011 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | BD  | 20 | 00 | A4 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:52.124 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | BE  | 6E |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:52.138 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | BE  | 00 | 01 | 02 | 02 | 01 | 02 | EE |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:52.250 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | BF  | 40 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:52.556 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | C0  | 19 | FB | 9F |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:52.572 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | C0  | 20 | 00 | DF |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:52.683 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | C1  | 13 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:52.699 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | C1  | 00 | 01 | 02 | 02 | 01 | 02 | A3 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:52.810 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | C2  | 43 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:53.115 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | C3  | 19 | FB | 62 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:53.147 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | C3  | 20 | 00 | 22 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:53.242 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | C4  | 18 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:53.273 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | C4  | 00 | 01 | 02 | 02 | 01 | 02 | A0 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:53.371 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | C5  | 46 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:53.675 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | C6  | 19 | FB | 99 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:53.706 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | C6  | 20 | 00 | DD |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:53.820 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | C7  | 15 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:53.835 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | C7  | 00 | 01 | 02 | 02 | 01 | 02 | A5 |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
+[2025-02-04 15:43:53.947 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | 78 | 06  | 01  | C8  | 49 |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:54.251 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 11  | C9  | 19 | FB | 8C |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:54.267 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | CS |
++-----+----+-----+-----+-----+----+----+----+
+| 02  | A2 | 08  | 91  | C9  | 20 | 00 | D8 |
++-----+----+-----+-----+-----+----+----+----+
+
+[2025-02-04 15:43:54.380 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+
+| STX | ID | LEN | CMD | SEQ | CS |
++-----+----+-----+-----+-----+----+
+| 02  | C1 | 06  | 11  | CA  | 1A |
++-----+----+-----+-----+-----+----+
+
+[2025-02-04 15:43:54.396 DEBUG] Packet Received
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| STX | ID | LEN | CMD | SEQ | D1 | D2 | D3 | D4 | D5 | D6 | CS |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+| 02  | C1 | 0C  | 91  | CA  | 00 | 01 | 02 | 02 | 01 | 02 | 9A |
++-----+----+-----+-----+-----+----+----+----+----+----+----+----+
+
