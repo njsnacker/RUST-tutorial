@@ -12,7 +12,8 @@ use std::time::Duration;
 
 mod protocol;
 
-const LOG_PATTERN: &str = "[{d} {l}] {m}{n}";
+// const LOG_PATTERN: &str = "[{d} {l}] {m}{n}";
+const LOG_PATTERN: &str = "[{d(%Y-%m-%d %H:%M:%S%.3f)}] {m}{n}";
 const LOG_FILE: &str = "log.txt";
 
 fn init_logger() -> Handle {

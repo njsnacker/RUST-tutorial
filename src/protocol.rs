@@ -27,7 +27,6 @@ const STEP_SEQUENCE: u8 = 0x04;
 const STEP_DATA: u8 = 0x05;
 
 #[derive(Clone)]
-
 struct HEADER {
     pub stx: u8,
     pub id: u8,
