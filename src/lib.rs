@@ -3,5 +3,3 @@
 
 mod app;
 pub use app::SerialApp;
-// 프로토콜 모듈 사용
-mod protocol;

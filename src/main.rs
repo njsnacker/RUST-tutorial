@@ -103,7 +103,7 @@ fn spawn_write_thread(serial: Arc<Mutex<serial::SERIAL>>) -> thread::JoinHandle<
     })
 }
 
-fn main() {
+fn main() -> eframe::Result {
     let log_handle = init_logger();
     // change_log_level(&log_handle, LevelFilter::Trace);
     change_log_level(&log_handle, LevelFilter::Debug);
@@ -127,29 +127,27 @@ fn main() {
     let read_thread = spawn_read_thread(Arc::clone(&serial));
     let write_thread = spawn_write_thread(Arc::clone(&serial));
 
-    loop {
-        debug!("Main loop");
-        thread::sleep(std::time::Duration::from_millis(1000));
-    }
+    // EGUI START
+    let native_options = eframe::NativeOptions {
+        viewport: egui::ViewportBuilder::default()
+            .with_inner_size([400.0, 300.0])
+            .with_min_inner_size([300.0, 220.0])
+            .with_icon(
+                // NOTE: Adding an icon is optional
+                eframe::icon_data::from_png_bytes(&include_bytes!("../assets/icon-256.png")[..])
+                    .expect("Failed to load icon"),
+            ),
+        ..Default::default()
+    };
+
+    eframe::run_native(
+        "Hello egui!",
+        native_options,
+        Box::new(|cc| Ok(Box::new(RUST_tutorial::SerialApp::new(cc)))),
+    )
+
+    // loop {
+    //     debug!("Main loop");
+    //     thread::sleep(std::time::Duration::from_millis(1000));
+    // }
 }
-
-// fn main() -> eframe::Result {
-//     env_logger::init(); // Log to stderr (if you run with `RUST_LOG=debug`).
-
-//     let native_options = eframe::NativeOptions {
-//         viewport: egui::ViewportBuilder::default()
-//             .with_inner_size([400.0, 300.0])
-//             .with_min_inner_size([300.0, 220.0])
-//             .with_icon(
-//                 // NOTE: Adding an icon is optional
-//                 eframe::icon_data::from_png_bytes(&include_bytes!("../assets/icon-256.png")[..])
-//                     .expect("Failed to load icon"),
-//             ),
-//         ..Default::default()
-//     };
-//     eframe::run_native(
-//         "Serial Tool",
-//         native_options,
-//         Box::new(|cc| Ok(Box::new(RUST_tutorial::SerialApp::new(cc)))),
-//     )
-// }
