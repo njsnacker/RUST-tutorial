@@ -3,6 +3,8 @@ use serialport::{SerialPortInfo, SerialPortType};
 use std::thread;
 use std::time::Duration;
 
+mod protocol;
+
 fn print_usb_serial_port(port_name: &String, usb_port: &serialport::UsbPortInfo) {
     println!("포트 이름: {}", port_name);
 
@@ -53,23 +55,40 @@ fn scan_serial_ports() -> Vec<String> {
 }
 
 fn main() {
-    let mut serial_buf: Vec<u8> = vec![0; 32];
+    let mut packet: protocol::PACKET = protocol::PACKET::new();
+
+    let mut serial_buf: [u8; 1] = [0; 1];
     let protocol_dummy: [u8; 8] = [0x02, 0xC1, 0x08, 0x12, 0x00, 0x04, 0x78, 0x9F];
+    let mut target_port_name = String::from("COM3");
 
     let port_names = scan_serial_ports();
 
-    println!("포트 이름: {:?}", port_names);
-    let mut port0 = serialport::new(&port_names[0], 9_600)
+    println!("Port names : {:?}", port_names);
+
+    // FOR DEBUG
+    let mut port0 = serialport::new(&target_port_name, 9_600)
         .timeout(Duration::from_millis(1000))
         .open()
         .expect("Failed to open port");
 
     loop {
-        for v in protocol_dummy {
-            port0.write(&[v]).expect("Failed to write to port");
+        // for v in protocol_dummy {
+        //     port0.write(&[v]).expect("Failed to write to port");
+        // }
+        // port0.write(b"a").expect("Failed to write to port");
+        // thread::sleep(Duration::from_millis(1000));
+        match port0.read(&mut serial_buf) {
+            Ok(t) => {
+                // println!("READ : {:?}", &serial_buf[..t]);
+                for byte in &serial_buf[..t] {
+                    println!("{:02X} ", byte);
+                }
+                let d: u8 = serial_buf[0];
+                packet.parse(d);
+            }
+            Err(ref e) if e.kind() == std::io::ErrorKind::TimedOut => (),
+            Err(e) => eprintln!("{:?}", e),
         }
-        port0.write(b"a").expect("Failed to write to port");
-        thread::sleep(Duration::from_millis(1000));
     }
 }
 
