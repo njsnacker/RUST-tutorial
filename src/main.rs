@@ -5,7 +5,10 @@ use log4rs::{
     encode::pattern::PatternEncoder,
     Handle,
 };
-use std::thread;
+use std::{
+    sync::{Arc, Mutex},
+    thread,
+};
 
 mod protocol;
 mod serial;
@@ -71,32 +74,62 @@ fn change_log_level(handle: &Handle, new_level: LevelFilter) {
     handle.set_config(new_config);
 }
 
+fn spawn_read_thread(serial: Arc<Mutex<serial::SERIAL>>) -> thread::JoinHandle<()> {
+    thread::spawn(move || {
+        let mut packet: protocol::PACKET = protocol::PACKET::new();
+
+        loop {
+            let d = {
+                let mut serial = serial.lock().unwrap();
+                serial.read()
+            };
+            trace!("Serial receive : {:02X} ", d);
+            let (rslt, p) = packet.parse(d);
+            if rslt {
+                // trace!("Valid PACKET\r\n{}", p.to_string());
+                debug!("Packet Received\r\n{}", p.to_string());
+            }
+        }
+    })
+}
+
+fn spawn_write_thread(serial: Arc<Mutex<serial::SERIAL>>) -> thread::JoinHandle<()> {
+    thread::spawn(move || loop {
+        {
+            let mut serial = serial.lock().unwrap();
+            serial.write(b'a');
+        }
+        thread::sleep(std::time::Duration::from_millis(1000));
+    })
+}
+
 fn main() {
     let log_handle = init_logger();
     // change_log_level(&log_handle, LevelFilter::Trace);
     change_log_level(&log_handle, LevelFilter::Debug);
 
-    let mut packet: protocol::PACKET = protocol::PACKET::new();
-    let protocol_dummy: [u8; 8] = [0x02, 0xC1, 0x08, 0x12, 0x00, 0x04, 0x78, 0x9F];
+    // let mut packet: protocol::PACKET = protocol::PACKET::new();
+    // let packet_temp_dummy: [u8; 8] = [0x02, 0xC1, 0x08, 0x12, 0x00, 0x04, 0x78, 0x9F];
 
-    let mut serial: serial::SERIAL = serial::SERIAL::new();
-    serial.scan_ports();
-    serial.init(&String::from("COM3"), 9_600);
+    /*
+       // let mut serial: serial::SERIAL = serial::SERIAL::new();
+       // serial.scan_ports();
+       // serial.init(&String::from("COM3"), 9_600);
+
+       // let read_thread = spawn_read_thread(serial);
+       // let write_thread = spawn_write_thread(serial);
+    */
+
+    let serial = Arc::new(Mutex::new(serial::SERIAL::new()));
+    serial.lock().unwrap().scan_ports();
+    serial.lock().unwrap().init(&String::from("COM3"), 9_600);
+
+    let read_thread = spawn_read_thread(Arc::clone(&serial));
+    let write_thread = spawn_write_thread(Arc::clone(&serial));
 
     loop {
-        // for v in protocol_dummy {
-        //     port0.write(&[v]).expect("Failed to write to port");
-        // }
-        // port0.write(b"a").expect("Failed to write to port");
-        // thread::sleep(Duration::from_millis(1000));
-
-        let d = serial.read();
-        trace!("Serial receive : {:02X} ", d);
-        let (rslt, p) = packet.parse(d);
-        if rslt {
-            // trace!("Valid PACKET\r\n{}", p.to_string());
-            debug!("Packet Received\r\n{}", p.to_string());
-        }
+        debug!("Main loop");
+        thread::sleep(std::time::Duration::from_millis(1000));
     }
 }
 

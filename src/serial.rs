@@ -103,7 +103,11 @@ impl SERIAL {
          */
     }
 
-    // pub fn write(&mut self, data: u8) {
-    //     self.port.write(&[data]).unwrap();
-    // }
+    pub fn write(&mut self, data: u8) {
+        if let Some(ref mut port) = self.port {
+            port.write(&[data]).unwrap();
+        } else {
+            panic!("Serial port not initialized");
+        }
+    }
 }
