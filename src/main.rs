@@ -1,9 +1,76 @@
+use log::{debug, error, info, trace, warn, LevelFilter};
+use log4rs::{
+    append::{console::ConsoleAppender, file::FileAppender},
+    config::{Appender, Config, Root},
+    encode::pattern::PatternEncoder,
+    Handle,
+};
 use serde::ser::SerializeStructVariant;
 use serialport::{SerialPortInfo, SerialPortType};
 use std::thread;
 use std::time::Duration;
 
 mod protocol;
+
+const LOG_PATTERN: &str = "[{d} {l}] {m}{n}";
+const LOG_FILE: &str = "log.txt";
+
+fn init_logger() -> Handle {
+    let stdout = ConsoleAppender::builder()
+        .encoder(Box::new(PatternEncoder::new(LOG_PATTERN)))
+        .build();
+
+    let file: FileAppender = FileAppender::builder()
+        .encoder(Box::new(PatternEncoder::new(LOG_PATTERN)))
+        .build(LOG_FILE)
+        .unwrap();
+
+    let config = Config::builder()
+        .appender(Appender::builder().build("stdout", Box::new(stdout)))
+        .appender(Appender::builder().build("file", Box::new(file)))
+        .build(
+            Root::builder()
+                .appenders(["stdout", "file"])
+                .build(LevelFilter::Info),
+        )
+        .unwrap();
+
+    let handle = log4rs::init_config(config).unwrap();
+    handle
+}
+
+fn change_log_level(handle: &Handle, new_level: LevelFilter) {
+    let new_config = Config::builder()
+        .appender(
+            Appender::builder().build(
+                "stdout",
+                Box::new(
+                    ConsoleAppender::builder()
+                        .encoder(Box::new(PatternEncoder::new(LOG_PATTERN)))
+                        .build(),
+                ),
+            ),
+        )
+        .appender(
+            Appender::builder().build(
+                "file",
+                Box::new(
+                    FileAppender::builder()
+                        .encoder(Box::new(PatternEncoder::new(LOG_PATTERN)))
+                        .build(LOG_FILE)
+                        .unwrap(),
+                ),
+            ),
+        )
+        .build(
+            Root::builder()
+                .appenders(["stdout", "file"])
+                .build(new_level),
+        )
+        .unwrap();
+
+    handle.set_config(new_config);
+}
 
 fn print_usb_serial_port(port_name: &String, usb_port: &serialport::UsbPortInfo) {
     println!("포트 이름: {}", port_name);
@@ -55,6 +122,9 @@ fn scan_serial_ports() -> Vec<String> {
 }
 
 fn main() {
+    let log_handle = init_logger();
+    change_log_level(&log_handle, LevelFilter::Trace);
+
     let mut packet: protocol::PACKET = protocol::PACKET::new();
 
     let mut serial_buf: [u8; 1] = [0; 1];
@@ -81,10 +151,12 @@ fn main() {
             Ok(t) => {
                 // println!("READ : {:?}", &serial_buf[..t]);
                 for byte in &serial_buf[..t] {
-                    println!("{:02X} ", byte);
+                    trace!("Serial receive : {:02X} ", byte);
+                    let (rslt, p) = packet.parse(*byte);
+                    if rslt {
+                        trace!("Valid PACKET\r\n{}", p.to_string());
+                    }
                 }
-                let d: u8 = serial_buf[0];
-                packet.parse(d);
             }
             Err(ref e) if e.kind() == std::io::ErrorKind::TimedOut => (),
             Err(e) => eprintln!("{:?}", e),

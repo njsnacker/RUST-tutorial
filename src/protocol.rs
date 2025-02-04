@@ -1,4 +1,14 @@
 // #[derive(Debug)]
+use log::{debug, error, info, trace, warn, LevelFilter};
+use log4rs::{
+    append::console::ConsoleAppender,
+    config::{Appender, Config, Root},
+    encode::pattern::PatternEncoder,
+    Handle,
+};
+use prettytable::{row, Cell, Row, Table};
+use std::fmt::Write;
+
 const STX: u8 = 0x02;
 
 const TYPE_STX: u8 = 0x00;
@@ -16,6 +26,8 @@ const STEP_COMMAND: u8 = 0x03;
 const STEP_SEQUENCE: u8 = 0x04;
 const STEP_DATA: u8 = 0x05;
 
+#[derive(Clone)]
+
 struct HEADER {
     pub stx: u8,
     pub id: u8,
@@ -24,6 +36,7 @@ struct HEADER {
     pub sequence: u8,
 }
 
+#[derive(Clone)]
 pub struct PACKET {
     pub header: HEADER,
     pub data: [u8; 256],
@@ -67,18 +80,43 @@ impl PACKET {
         return packet;
     }
 
-    pub fn print(&self) {
-        println!("STX: {:02X}", self.header.stx);
-        println!("ID: {:02X}", self.header.id);
-        println!("LENGTH: {:02X}", self.header.length);
-        println!("COMMAND: {:02X}", self.header.command);
-        println!("SEQUENCE: {:02X}", self.header.sequence);
-        print!("DATA: ");
-        for i in &self.data[0..(self.header.length - 6) as usize] {
-            print!("{:02X} ", i);
+    pub fn to_string(&self) -> String {
+        let mut table = Table::new();
+        let mut out_str = String::new();
+        let mut header_row: Vec<Cell> = Vec::new();
+        let mut content_row: Vec<Cell> = Vec::new();
+
+        // Build header row with centered alignment
+        header_row.push(Cell::new("STX").style_spec("c"));
+        header_row.push(Cell::new("ID").style_spec("c"));
+        header_row.push(Cell::new("LEN").style_spec("c"));
+        header_row.push(Cell::new("CMD").style_spec("c"));
+        header_row.push(Cell::new("SEQ").style_spec("c"));
+
+        for i in 0..(self.header.length - 6) {
+            header_row.push(Cell::new(&format!("D{}", i + 1)).style_spec("c"));
         }
-        println!();
-        println!("CHECKSUM: {:02X}", self.checksum);
+
+        header_row.push(Cell::new("CS").style_spec("c"));
+
+        // Build content row with centered alignment
+        content_row.push(Cell::new(&format!("{:02X}", self.header.stx)).style_spec("c"));
+        content_row.push(Cell::new(&format!("{:02X}", self.header.id)).style_spec("c"));
+        content_row.push(Cell::new(&format!("{:02X}", self.header.length)).style_spec("c"));
+        content_row.push(Cell::new(&format!("{:02X}", self.header.command)).style_spec("c"));
+        content_row.push(Cell::new(&format!("{:02X}", self.header.sequence)).style_spec("c"));
+
+        for i in 0..(self.header.length - 6) {
+            content_row.push(Cell::new(&format!("{:02X}", self.data[i as usize])).style_spec("c"));
+        }
+
+        content_row.push(Cell::new(&format!("{:02X}", self.checksum)).style_spec("c"));
+
+        table.add_row(Row::new(header_row));
+        table.add_row(Row::new(content_row));
+        write!(out_str, "{}", table).unwrap();
+
+        return out_str;
     }
 
     fn check_cs(&self) -> bool {
@@ -93,7 +131,11 @@ impl PACKET {
         }
 
         // checksum 비교
-        // println!("Checksum: calc {:02X}, got {:02X}", calc_cs, self.checksum);
+        trace!(
+            "Checksum calc result : calc {:02X}, got {:02X}",
+            calc_cs,
+            self.checksum
+        );
 
         if calc_cs == self.checksum {
             return true;
@@ -126,11 +168,14 @@ impl PACKET {
                 self.data[self.len_check as usize] = value;
             }
             TYPE_CHECKSUM => self.checksum = value,
-            _ => println!("Invalid type"),
+            _ => trace!("Invalid type"),
         }
     }
 
-    pub fn parse(&mut self, value: u8) {
+    pub fn parse(&mut self, value: u8) -> (bool, PACKET) {
+        let mut ret_packet: PACKET = PACKET::new();
+        let mut parse_rslt: bool = false;
+
         match self.step {
             STEP_STX => {
                 if value == STX {
@@ -159,12 +204,10 @@ impl PACKET {
                 if self.len_check >= (self.header.length - 6) {
                     self.update(TYPE_CHECKSUM, value);
                     if self.check_cs() {
-                        self.print();
+                        ret_packet = self.clone();
+                        parse_rslt = true;
                     } else {
-                        println!("Checksum Fail");
-                        println!("Checksum Fail");
-                        println!("Checksum Fail");
-                        println!("Checksum Fail");
+                        trace!("Checksum Fail");
                     }
 
                     self.clear();
@@ -177,5 +220,7 @@ impl PACKET {
                 self.clear();
             }
         }
+
+        (parse_rslt, ret_packet)
     }
 }
