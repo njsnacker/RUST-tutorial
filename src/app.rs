@@ -54,8 +54,10 @@ impl eframe::App for SerialApp {
                     if ui.button("Exit").clicked() {
                         ctx.send_viewport_cmd(egui::ViewportCommand::Close);
                     }
+                    if ui.button("Save log as").clicked() {}
                 });
-                ui.add_space(16.0);
+                ui.menu_button("View", |ui| if ui.button("Clear log").clicked() {});
+                ui.menu_button("Option", |ui| if ui.button("Bit checker").clicked() {});
                 ui.menu_button("Help", |ui| if ui.button("About").clicked() {});
                 // egui::widgets::global_theme_preference_buttons(ui);
             });
@@ -63,7 +65,9 @@ impl eframe::App for SerialApp {
 
         egui::CentralPanel::default().show(ctx, |ui| {
             // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading("eframe template");
+
+            comport_select(ui);
+            filter_config(ui);
 
             ui.horizontal(|ui| {
                 ui.label("Write something: ");
@@ -90,8 +94,69 @@ impl eframe::App for SerialApp {
     }
 }
 
+fn comport_select(ui: &mut egui::Ui) {
+    let mut selected = 0;
+    ui.vertical(|ui| {
+        ui.heading("COM Port Settings"); // 제목 추가
+        egui::Frame::group(ui.style()).show(ui, |ui| {
+            ui.vertical(|ui: &mut egui::Ui| {
+                ui.horizontal(|ui| {
+                    ui.label("Select COM Port :");
+                    egui::ComboBox::from_id_salt("Select COM Port : ")
+                        .selected_text(format!("{:?}", selected))
+                        .show_ui(ui, |ui| {
+                            ui.selectable_value(&mut selected, 0, "First");
+                            ui.selectable_value(&mut selected, 1, "Second");
+                            ui.selectable_value(&mut selected, 2, "Third");
+                        });
+
+                    ui.label("Baud rate :");
+                    egui::ComboBox::from_id_salt("Baud rate : ")
+                        .selected_text(format!("{:?}", selected))
+                        .show_ui(ui, |ui| {
+                            ui.selectable_value(&mut selected, 0, "9600");
+                            ui.selectable_value(&mut selected, 1, "115200");
+                            ui.selectable_value(&mut selected, 2, "Third");
+                        });
+
+                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                        ui.button("Connect");
+                    });
+                });
+            });
+        });
+    });
+}
+
+fn filter_config(ui: &mut egui::Ui) {
+    let mut id_filter = String::new();
+    let mut cmd_filter = String::new();
+
+    ui.vertical(|ui| {
+        ui.heading("Filter Configuration"); // 제목 추가
+        egui::Frame::group(ui.style()).show(ui, |ui| {
+            ui.vertical(|ui: &mut egui::Ui| {
+                ui.horizontal(|ui| {
+                    ui.label("ID :");
+                    ui.add_sized(
+                        ui.available_size(),
+                        egui::TextEdit::singleline(&mut id_filter),
+                    );
+                });
+                ui.horizontal(|ui| {
+                    ui.label("CMD :");
+                    ui.add_sized(
+                        ui.available_size(),
+                        egui::TextEdit::singleline(&mut cmd_filter),
+                    );
+                });
+            });
+        });
+    });
+}
+
 fn powered_by_egui_and_eframe(ui: &mut egui::Ui) {
-    ui.horizontal(|ui| {
+    ui.horizontal(|ui: &mut egui::Ui| {
         ui.spacing_mut().item_spacing.x = 0.0;
         ui.label("Powered by ");
         ui.hyperlink_to("egui", "https://github.com/emilk/egui");
