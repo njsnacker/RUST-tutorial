@@ -78,11 +78,19 @@ impl SERIAL {
     }
 
     pub fn read(&mut self) -> u8 {
-        if let Some(ref mut port) = self.port {
-            port.read(&mut self.buf).unwrap();
-            return self.buf[0];
-        } else {
-            panic!("Serial port not initialized");
+        loop {
+            if let Some(ref mut port) = self.port {
+                match port.read(&mut self.buf) {
+                    Ok(_) => return self.buf[0],
+                    Err(ref e) if e.kind() == std::io::ErrorKind::TimedOut => {
+                        // 타임아웃 발생 시 계속 대기
+                        continue;
+                    }
+                    Err(e) => panic!("Error reading from serial port: {:?}", e),
+                }
+            } else {
+                panic!("Serial port not initialized");
+            }
         }
 
         /* OLD CODE
