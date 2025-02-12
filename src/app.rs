@@ -1,3 +1,4 @@
+use crate::protocol::PACKET;
 use crate::serial::BaudRate;
 use crate::serial::ComPort;
 use egui::InnerResponse;
@@ -15,8 +16,11 @@ pub struct SerialApp {
     id_filter: String,
     cmd_filter: String,
 
-    #[serde(skip)] // This how you opt-out of serialization of a field
-    value: f32,
+    send_delay: u32,
+    send_count: u32,
+
+    #[serde(skip)]
+    packet: PACKET,
 }
 
 impl Default for SerialApp {
@@ -27,7 +31,9 @@ impl Default for SerialApp {
             com_port: ComPort::COM1,
             id_filter: String::new(),
             cmd_filter: String::new(),
-            value: 2.7,
+            send_delay: 100,
+            send_count: 1,
+            packet: PACKET::new(),
         }
     }
 }
@@ -49,39 +55,36 @@ impl SerialApp {
 
     // COM Port 연결 설정 섹션
     fn section_comport_select(&mut self, ui: &mut egui::Ui) {
-        ui.vertical(|ui| {
-            ui.heading("COM Port Settings"); // 제목 추가
-            egui::Frame::group(ui.style()).show(ui, |ui| {
-                ui.horizontal(|ui| {
-                    ui.label("Select COM Port :");
-                    egui::ComboBox::from_id_salt("Select COM Port : ")
-                        .selected_text(format!("{:?}", self.com_port))
-                        .show_ui(ui, |ui| {
-                            for com_port in ComPort::iter() {
-                                ui.selectable_value(
-                                    &mut self.com_port,
-                                    com_port,
-                                    format!("{:?}", com_port),
-                                );
-                            }
-                        });
-
-                    ui.label("Baud rate :");
-                    egui::ComboBox::from_id_salt("Baud rate : ")
-                        .selected_text(self.baud_rate.to_string())
-                        .show_ui(ui, |ui| {
-                            for baud_rate in BaudRate::iter() {
-                                ui.selectable_value(
-                                    &mut self.baud_rate,
-                                    baud_rate,
-                                    baud_rate.to_string(),
-                                );
-                            }
-                        });
-
-                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        ui.button("Connect");
+        egui::Frame::group(ui.style()).show(ui, |ui| {
+            ui.horizontal(|ui| {
+                ui.label("Select COM Port :");
+                egui::ComboBox::from_id_salt("Select COM Port : ")
+                    .selected_text(format!("{:?}", self.com_port))
+                    .show_ui(ui, |ui| {
+                        for com_port in ComPort::iter() {
+                            ui.selectable_value(
+                                &mut self.com_port,
+                                com_port,
+                                format!("{:?}", com_port),
+                            );
+                        }
                     });
+
+                ui.label("Baud rate :");
+                egui::ComboBox::from_id_salt("Baud rate : ")
+                    .selected_text(self.baud_rate.to_string())
+                    .show_ui(ui, |ui| {
+                        for baud_rate in BaudRate::iter() {
+                            ui.selectable_value(
+                                &mut self.baud_rate,
+                                baud_rate,
+                                baud_rate.to_string(),
+                            );
+                        }
+                    });
+
+                ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                    ui.button("Connect");
                 });
             });
         });
@@ -94,7 +97,7 @@ impl SerialApp {
             ui.set_min_width(width); // Frame의 최소 너비를 설정
 
             egui::CollapsingHeader::new("Filter Configuration")
-                .default_open(true)
+                .default_open(false)
                 .show(ui, |ui| {
                     ui.vertical(|ui: &mut egui::Ui| {
                         ui.horizontal(|ui| {
@@ -133,59 +136,99 @@ impl SerialApp {
         });
     }
 
+    // 패킷 전송 섹션
     fn section_send_packet(&self, ui: &mut egui::Ui) {
-        let mut id = String::new();
-        let mut len = String::new();
-        let mut cmd = String::new();
-        let mut seq = String::new();
         let mut data = String::new();
-        let mut cs = String::new();
 
         let mut delay = String::new();
         let mut count = String::new();
 
-        ui.heading("Send Packet");
         egui::Frame::group(ui.style()).show(ui, |ui| {
-            ui.vertical(|ui| {
-                ui.horizontal(|ui| {
-                    self.unit_1(ui, "ID", &mut id, false);
-                    self.unit_1(ui, "LEN", &mut len, false);
-                    self.unit_1(ui, "CMD", &mut cmd, false);
-                    self.unit_1(ui, "SEQ", &mut seq, false);
-                    // DATA를 확장 가능한 영역으로 설정
-                    ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), |ui| {
-                        self.unit_1(ui, "DATA", &mut data, false);
-                        // ui.label("DATA");
-                    });
-                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        self.unit_1(ui, "CS", &mut cs, false);
+            let width: f32 = ui.available_width(); // 사용 가능한 전체 너비 가져오기
+            ui.set_min_width(width); // Frame의 최소 너비를 설정
+            egui::CollapsingHeader::new("Packet Send")
+                .default_open(false)
+                .show(ui, |ui| {
+                    ui.vertical(|ui| {
+                        ui.horizontal(|ui| {
+                            self.unit_1(
+                                ui,
+                                "ID",
+                                &mut format!("{:02X}", self.packet.header.id),
+                                false,
+                            );
+                            self.unit_1(
+                                ui,
+                                "LEN",
+                                &mut format!("{:02X}", self.packet.header.length),
+                                false,
+                            );
+                            self.unit_1(
+                                ui,
+                                "CMD",
+                                &mut &mut format!("{:02X}", self.packet.header.command),
+                                false,
+                            );
+                            self.unit_1(
+                                ui,
+                                "SEQ",
+                                &mut &mut format!("{:02X}", self.packet.header.sequence),
+                                false,
+                            );
+                            // DATA를 확장 가능한 영역으로 설정
+                            ui.with_layout(
+                                egui::Layout::left_to_right(egui::Align::Center),
+                                |ui| {
+                                    self.unit_1(ui, "DATA", &mut data, false);
+                                    // ui.label("DATA");
+                                },
+                            );
+                            ui.with_layout(
+                                egui::Layout::right_to_left(egui::Align::Center),
+                                |ui| {
+                                    self.unit_1(
+                                        ui,
+                                        "CS",
+                                        &mut &mut format!("{:02X}", self.packet.checksum),
+                                        false,
+                                    );
+                                },
+                            );
+                        });
+                        ui.horizontal(|ui| {
+                            ui.label("Delay :");
+                            ui.text_edit_singleline(&mut delay);
+                            ui.label("Count :");
+                            ui.text_edit_singleline(&mut count);
+                            ui.with_layout(
+                                egui::Layout::right_to_left(egui::Align::Center),
+                                |ui| {
+                                    ui.button("Send");
+                                },
+                            );
+                        });
                     });
                 });
-                ui.horizontal(|ui| {
-                    ui.label("Delay :");
-                    ui.text_edit_singleline(&mut delay);
-                    ui.label("Count :");
-                    ui.text_edit_singleline(&mut count);
-                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        ui.button("Send");
-                    });
-                });
-            });
         });
     }
 
+    // 로그 출력 섹션
     fn log(&self, ui: &mut egui::Ui) {
-        egui::ScrollArea::vertical()
-            .auto_shrink(false)
-            .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::default())
-            .show(ui, |ui| {
-                ui.with_layout(
-                    egui::Layout::top_down(egui::Align::LEFT).with_cross_justify(true),
-                    |ui| {
-                        ui.label(lipsum(1000));
-                    },
-                );
-            });
+        egui::Frame::group(ui.style()).show(ui, |ui| {
+            let width: f32 = ui.available_width(); // 사용 가능한 전체 너비 가져오기
+            ui.set_min_width(width); // Frame의 최소 너비를 설정
+            egui::ScrollArea::vertical()
+                .auto_shrink(false)
+                .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::default())
+                .show(ui, |ui| {
+                    ui.with_layout(
+                        egui::Layout::top_down(egui::Align::LEFT).with_cross_justify(true),
+                        |ui| {
+                            ui.label(lipsum(1000));
+                        },
+                    );
+                });
+        });
     }
 }
 

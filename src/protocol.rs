@@ -7,6 +7,7 @@ use log4rs::{
     Handle,
 };
 use prettytable::{row, Cell, Row, Table};
+use serde::{Deserialize, Serialize};
 use std::fmt::Write;
 
 const STX: u8 = 0x02;
@@ -26,8 +27,8 @@ const STEP_COMMAND: u8 = 0x03;
 const STEP_SEQUENCE: u8 = 0x04;
 const STEP_DATA: u8 = 0x05;
 
-#[derive(Clone)]
-struct HEADER {
+#[derive(Debug, Clone, Copy)]
+pub struct HEADER {
     pub stx: u8,
     pub id: u8,
     pub length: u8,
@@ -35,7 +36,7 @@ struct HEADER {
     pub sequence: u8,
 }
 
-#[derive(Clone)]
+#[derive(Debug, Clone, Copy)]
 pub struct PACKET {
     pub header: HEADER,
     pub data: [u8; 256],
