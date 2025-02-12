@@ -9,6 +9,7 @@ dependencies = [
  "eframe",
  "egui",
  "env_logger",
+ "lipsum",
  "log",
  "log4rs",
  "prettytable-rs",
@@ -1738,6 +1739,16 @@ name = "linux-raw-sys"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c4cd1a83af159aa67994778be9070f0ae1bd732942279cabb14f86f986a21456"
+
+[[package]]
+name = "lipsum"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a8451846f1f337e44486666989fbce40be804da139d5a4477d6b88ece5dc69f4"
+dependencies = [
+ "rand",
+ "rand_chacha",
+]
 
 [[package]]
 name = "litrs"

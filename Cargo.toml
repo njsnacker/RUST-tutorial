@@ -24,6 +24,7 @@ log4rs = "1.2"
 # 데이터 이쁘게 출력
 prettytable-rs = "^0.10"
 
+lipsum = "0.8"
 
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
