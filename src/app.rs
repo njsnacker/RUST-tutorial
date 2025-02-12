@@ -1,7 +1,10 @@
 use crate::protocol::PACKET;
 use crate::serial::BaudRate;
 use crate::serial::ComPort;
+use egui::Color32;
 use egui::InnerResponse;
+use egui_extras::Size;
+use egui_extras::StripBuilder;
 use lipsum::lipsum;
 use strum::IntoEnumIterator;
 
@@ -129,7 +132,8 @@ impl SerialApp {
         return ui.vertical(|ui| {
             ui.label(label);
             if expand {
-                ui.add_sized(ui.available_size(), egui::TextEdit::singleline(value));
+                // ui.add_sized(ui.available_size(), egui::TextEdit::singleline(value));
+                ui.text_edit_singleline(value);
             } else {
                 ui.add_sized([30.0, 20.0], egui::TextEdit::singleline(value));
             }
@@ -139,7 +143,6 @@ impl SerialApp {
     // 패킷 전송 섹션
     fn section_send_packet(&self, ui: &mut egui::Ui) {
         let mut data = String::new();
-
         let mut delay = String::new();
         let mut count = String::new();
 
@@ -150,51 +153,110 @@ impl SerialApp {
                 .default_open(false)
                 .show(ui, |ui| {
                     ui.vertical(|ui| {
+                        // ui.horizontal(|ui| {
+                        //     self.unit_1(
+                        //         ui,
+                        //         "STX",
+                        //         &mut format!("{:02X}", self.packet.header.stx),
+                        //         false,
+                        //     );
+                        //     self.unit_1(
+                        //         ui,
+                        //         "ID",
+                        //         &mut format!("{:02X}", self.packet.header.id),
+                        //         false,
+                        //     );
+                        //     self.unit_1(
+                        //         ui,
+                        //         "LEN",
+                        //         &mut format!("{:02X}", self.packet.header.length),
+                        //         false,
+                        //     );
+                        //     self.unit_1(
+                        //         ui,
+                        //         "CMD",
+                        //         &mut &mut format!("{:02X}", self.packet.header.command),
+                        //         false,
+                        //     );
+                        //     self.unit_1(
+                        //         ui,
+                        //         "SEQ",
+                        //         &mut &mut format!("{:02X}", self.packet.header.sequence),
+                        //         false,
+                        //     );
+
+                        //     self.unit_1(ui, "DATA", &mut data, true);
+                        //     self.unit_1(
+                        //         ui,
+                        //         "CS",
+                        //         &mut &mut format!("{:02X}", self.packet.checksum),
+                        //         false,
+                        //     );
+                        //     // // DATA를 확장 가능한 영역으로 설정
+                        //     // ui.with_layout(
+                        //     //     egui::Layout::left_to_right(egui::Align::Center),
+                        //     //     |ui| {
+                        //     //         self.unit_1(ui, "DATA", &mut data, false);
+                        //     //         // ui.label("DATA");
+                        //     //     },
+                        //     // );
+                        //     // ui.with_layout(
+                        //     //     egui::Layout::right_to_left(egui::Align::Center),
+                        //     //     |ui| {
+                        //     //         self.unit_1(
+                        //     //             ui,
+                        //     //             "CS",
+                        //     //             &mut &mut format!("{:02X}", self.packet.checksum),
+                        //     //             false,
+                        //     //         );
+                        //     //     },
+                        //     // );
+                        // });
+
                         ui.horizontal(|ui| {
-                            self.unit_1(
-                                ui,
-                                "ID",
-                                &mut format!("{:02X}", self.packet.header.id),
-                                false,
-                            );
-                            self.unit_1(
-                                ui,
-                                "LEN",
-                                &mut format!("{:02X}", self.packet.header.length),
-                                false,
-                            );
-                            self.unit_1(
-                                ui,
-                                "CMD",
-                                &mut &mut format!("{:02X}", self.packet.header.command),
-                                false,
-                            );
-                            self.unit_1(
-                                ui,
-                                "SEQ",
-                                &mut &mut format!("{:02X}", self.packet.header.sequence),
-                                false,
-                            );
-                            // DATA를 확장 가능한 영역으로 설정
-                            ui.with_layout(
-                                egui::Layout::left_to_right(egui::Align::Center),
-                                |ui| {
-                                    self.unit_1(ui, "DATA", &mut data, false);
-                                    // ui.label("DATA");
-                                },
-                            );
-                            ui.with_layout(
-                                egui::Layout::right_to_left(egui::Align::Center),
-                                |ui| {
-                                    self.unit_1(
-                                        ui,
-                                        "CS",
-                                        &mut &mut format!("{:02X}", self.packet.checksum),
-                                        false,
-                                    );
-                                },
-                            );
+                            StripBuilder::new(ui)
+                                .size(Size::remainder().at_least(100.0)) // top cell
+                                .size(Size::exact(40.0)) // bottom cell
+                                .vertical(|mut strip| {
+                                    // Add the top 'cell'
+                                    // strip.cell(|ui| {
+                                    //     ui.painter().rect_filled(
+                                    //         ui.available_rect_before_wrap(),
+                                    //         0.0,
+                                    //         Color32::from_rgba_unmultiplied(255, 0, 0, 128), // Example of a faded red color
+                                    //     );
+                                    //     ui.label("Fixed");
+                                    // });
+                                    // We add a nested strip in the bottom cell:
+                                    strip.strip(|builder| {
+                                        builder.sizes(Size::remainder(), 2).horizontal(
+                                            |mut strip| {
+                                                strip.cell(|ui| {
+                                                    ui.painter().rect_filled(
+                                                        ui.available_rect_before_wrap(),
+                                                        0.0,
+                                                        Color32::from_rgba_unmultiplied(
+                                                            0, 255, 0, 128,
+                                                        ), // Example of a faded red color
+                                                    );
+                                                    ui.label("Top Left");
+                                                });
+                                                strip.cell(|ui| {
+                                                    ui.painter().rect_filled(
+                                                        ui.available_rect_before_wrap(),
+                                                        0.0,
+                                                        Color32::from_rgba_unmultiplied(
+                                                            0, 0, 255, 128,
+                                                        ), // Example of a faded red color
+                                                    );
+                                                    ui.label("Top Right");
+                                                });
+                                            },
+                                        );
+                                    });
+                                });
                         });
+
                         ui.horizontal(|ui| {
                             ui.label("Delay :");
                             ui.text_edit_singleline(&mut delay);
