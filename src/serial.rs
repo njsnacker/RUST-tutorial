@@ -1,7 +1,41 @@
-use std::time::Duration;
+use std::{fmt, time::Duration};
 
 use log::{debug, error, info, trace, warn, LevelFilter};
 use serialport::{SerialPortInfo, SerialPortType};
+
+use serde::{Deserialize, Serialize};
+use strum_macros::EnumIter;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize, Serialize, EnumIter)]
+pub enum BaudRate {
+    B9600 = 9600,
+    B38400 = 38400,
+    B115200 = 115200,
+}
+
+impl fmt::Display for BaudRate {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            BaudRate::B9600 => write!(f, "9600"),
+            BaudRate::B38400 => write!(f, "38400"),
+            BaudRate::B115200 => write!(f, "115200"),
+        }
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize, Serialize, EnumIter)]
+pub enum ComPort {
+    COM1 = 1,
+    COM2 = 2,
+    COM3 = 3,
+    COM4 = 4,
+    COM5 = 5,
+    COM6 = 6,
+    COM7 = 7,
+    COM8 = 8,
+    COM9 = 9,
+    COM10 = 10,
+}
 
 pub struct SERIAL {
     pub port_name: String,
