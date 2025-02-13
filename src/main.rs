@@ -10,6 +10,7 @@ use std::{
     thread,
 };
 
+mod app;
 mod protocol;
 mod serial;
 
@@ -130,8 +131,8 @@ fn main() -> eframe::Result {
     // EGUI START
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_inner_size([400.0, 300.0])
-            .with_min_inner_size([300.0, 220.0])
+            .with_inner_size([app::WIDNOW_X_MIN, app::WIDNOW_Y_MIN])
+            .with_min_inner_size([app::WIDNOW_X_MIN, app::WIDNOW_Y_MIN])
             .with_icon(
                 // NOTE: Adding an icon is optional
                 eframe::icon_data::from_png_bytes(&include_bytes!("../assets/icon-256.png")[..])
