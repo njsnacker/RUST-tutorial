@@ -13,7 +13,6 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 serialport = "4.7"
 egui = "0.31"
-egui_extras = "0.31"
 eframe = { version = "0.31", default-features = false, features = [
     "accesskit",     # Make egui compatible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.

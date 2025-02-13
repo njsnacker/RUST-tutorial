@@ -1,10 +1,7 @@
 use crate::protocol::PACKET;
 use crate::serial::BaudRate;
 use crate::serial::ComPort;
-use egui::Color32;
-use egui::InnerResponse;
-use egui_extras::Size;
-use egui_extras::StripBuilder;
+use egui::{Align, Button, Color32, InnerResponse, Layout};
 use lipsum::lipsum;
 use strum::IntoEnumIterator;
 
@@ -96,8 +93,8 @@ impl SerialApp {
     // ID 및 CMD 필터 설정 섹션
     fn section_filter_config(&mut self, ui: &mut egui::Ui) {
         egui::Frame::group(ui.style()).show(ui, |ui| {
-            let width = ui.available_width(); // 사용 가능한 전체 너비 가져오기
-            ui.set_min_width(width); // Frame의 최소 너비를 설정
+            // let width = ui.available_width(); // 사용 가능한 전체 너비 가져오기
+            // ui.set_min_width(width); // Frame의 최소 너비를 설정
 
             egui::CollapsingHeader::new("Filter Configuration")
                 .default_open(false)
@@ -132,8 +129,18 @@ impl SerialApp {
         return ui.vertical(|ui| {
             ui.label(label);
             if expand {
-                // ui.add_sized(ui.available_size(), egui::TextEdit::singleline(value));
-                ui.text_edit_singleline(value);
+                ui.allocate_ui_with_layout(
+                    egui::vec2(ui.available_width(), 20.0),
+                    Layout::left_to_right(egui::Align::Center),
+                    |ui| {
+                        ui.button("남은 공간을 채우기");
+                    },
+                );
+                // ui.add_sized(
+                //     [ui.available_width() - 80.0, 20.0],
+                //     egui::TextEdit::singleline(value),
+                // );
+                // ui.text_edit_singleline(value);
             } else {
                 ui.add_sized([30.0, 20.0], egui::TextEdit::singleline(value));
             }
@@ -147,114 +154,73 @@ impl SerialApp {
         let mut count = String::new();
 
         egui::Frame::group(ui.style()).show(ui, |ui| {
-            let width: f32 = ui.available_width(); // 사용 가능한 전체 너비 가져오기
-            ui.set_min_width(width); // Frame의 최소 너비를 설정
             egui::CollapsingHeader::new("Packet Send")
                 .default_open(false)
                 .show(ui, |ui| {
                     ui.vertical(|ui| {
-                        // ui.horizontal(|ui| {
-                        //     self.unit_1(
-                        //         ui,
-                        //         "STX",
-                        //         &mut format!("{:02X}", self.packet.header.stx),
-                        //         false,
-                        //     );
-                        //     self.unit_1(
-                        //         ui,
-                        //         "ID",
-                        //         &mut format!("{:02X}", self.packet.header.id),
-                        //         false,
-                        //     );
-                        //     self.unit_1(
-                        //         ui,
-                        //         "LEN",
-                        //         &mut format!("{:02X}", self.packet.header.length),
-                        //         false,
-                        //     );
-                        //     self.unit_1(
-                        //         ui,
-                        //         "CMD",
-                        //         &mut &mut format!("{:02X}", self.packet.header.command),
-                        //         false,
-                        //     );
-                        //     self.unit_1(
-                        //         ui,
-                        //         "SEQ",
-                        //         &mut &mut format!("{:02X}", self.packet.header.sequence),
-                        //         false,
-                        //     );
+                        ui.painter().rect_filled(
+                            ui.available_rect_before_wrap(),
+                            0.0,
+                            Color32::from_rgba_unmultiplied(0, 255, 0, 128), // Example of a faded red color
+                        );
+                        ui.with_layout(Layout::left_to_right(Align::Center), |ui| {
+                            // 고정 크기 버튼
+                            ui.add_sized([100.0, 50.0], Button::new("고정 크기"));
 
-                        //     self.unit_1(ui, "DATA", &mut data, true);
-                        //     self.unit_1(
-                        //         ui,
-                        //         "CS",
-                        //         &mut &mut format!("{:02X}", self.packet.checksum),
-                        //         false,
-                        //     );
-                        //     // // DATA를 확장 가능한 영역으로 설정
-                        //     // ui.with_layout(
-                        //     //     egui::Layout::left_to_right(egui::Align::Center),
-                        //     //     |ui| {
-                        //     //         self.unit_1(ui, "DATA", &mut data, false);
-                        //     //         // ui.label("DATA");
-                        //     //     },
-                        //     // );
-                        //     // ui.with_layout(
-                        //     //     egui::Layout::right_to_left(egui::Align::Center),
-                        //     //     |ui| {
-                        //     //         self.unit_1(
-                        //     //             ui,
-                        //     //             "CS",
-                        //     //             &mut &mut format!("{:02X}", self.packet.checksum),
-                        //     //             false,
-                        //     //         );
-                        //     //     },
-                        //     // );
-                        // });
+                            // 남은 공간을 정확하게 차지하는 빈 공간 추가
+                            let remaining_width = ui.available_width() - 200.0; // (100 + 100) 만큼 제외
+                            if remaining_width > 0.0 {
+                                ui.add_sized(
+                                    [remaining_width, 50.0],
+                                    Button::new("남은 공간을 채우기"),
+                                );
+                            }
+                            ui.add(Button::new("sadasd"));
 
+                            // 고정 크기 버튼 2
+                            ui.add_sized([100.0, 50.0], Button::new("고정 크기2"));
+                        });
                         ui.horizontal(|ui| {
-                            StripBuilder::new(ui)
-                                .size(Size::remainder().at_least(100.0)) // top cell
-                                .size(Size::exact(40.0)) // bottom cell
-                                .vertical(|mut strip| {
-                                    // Add the top 'cell'
-                                    // strip.cell(|ui| {
-                                    //     ui.painter().rect_filled(
-                                    //         ui.available_rect_before_wrap(),
-                                    //         0.0,
-                                    //         Color32::from_rgba_unmultiplied(255, 0, 0, 128), // Example of a faded red color
-                                    //     );
-                                    //     ui.label("Fixed");
-                                    // });
-                                    // We add a nested strip in the bottom cell:
-                                    strip.strip(|builder| {
-                                        builder.sizes(Size::remainder(), 2).horizontal(
-                                            |mut strip| {
-                                                strip.cell(|ui| {
-                                                    ui.painter().rect_filled(
-                                                        ui.available_rect_before_wrap(),
-                                                        0.0,
-                                                        Color32::from_rgba_unmultiplied(
-                                                            0, 255, 0, 128,
-                                                        ), // Example of a faded red color
-                                                    );
-                                                    ui.label("Top Left");
-                                                });
-                                                strip.cell(|ui| {
-                                                    ui.painter().rect_filled(
-                                                        ui.available_rect_before_wrap(),
-                                                        0.0,
-                                                        Color32::from_rgba_unmultiplied(
-                                                            0, 0, 255, 128,
-                                                        ), // Example of a faded red color
-                                                    );
-                                                    ui.label("Top Right");
-                                                });
-                                            },
-                                        );
-                                    });
-                                });
+                            ui.with_layout(Layout::left_to_right(egui::Align::Center), |ui| {
+                                self.unit_1(
+                                    ui,
+                                    "STX",
+                                    &mut format!("{:02X}", self.packet.header.stx),
+                                    false,
+                                );
+                                self.unit_1(
+                                    ui,
+                                    "ID",
+                                    &mut format!("{:02X}", self.packet.header.id),
+                                    false,
+                                );
+                                self.unit_1(
+                                    ui,
+                                    "LEN",
+                                    &mut format!("{:02X}", self.packet.header.length),
+                                    false,
+                                );
+                                self.unit_1(
+                                    ui,
+                                    "CMD",
+                                    &mut &mut format!("{:02X}", self.packet.header.command),
+                                    false,
+                                );
+                                self.unit_1(
+                                    ui,
+                                    "SEQ",
+                                    &mut &mut format!("{:02X}", self.packet.header.sequence),
+                                    false,
+                                );
+
+                                self.unit_1(ui, "DATA", &mut data, true);
+                                self.unit_1(
+                                    ui,
+                                    "CS",
+                                    &mut &mut format!("{:02X}", self.packet.checksum),
+                                    false,
+                                );
+                            });
                         });
 
                         ui.horizontal(|ui| {
