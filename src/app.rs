@@ -5,6 +5,7 @@ use eframe::Frame;
 use egui::emath::align;
 use egui::frame;
 use egui::vec2;
+use egui::Widget;
 use egui::{Align, Button, Color32, InnerResponse, Layout};
 use lipsum::lipsum;
 use strum::IntoEnumIterator;
@@ -222,7 +223,7 @@ impl SerialApp {
                                 "DATA",
                                 &mut data,
                                 false,
-                                WIDNOW_X_MIN - (40.0 * 9.0 - 10.0),
+                                ui.available_width() - (50.0),
                             );
 
                             ui.with_layout(egui::Layout::right_to_left(egui::Align::Min), |ui| {
